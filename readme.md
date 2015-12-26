@@ -1,3 +1,8 @@
 # [Milligram](http://milligram.github.io/)
 
-| A simple, slight, and minimalist CSS framework
+| A minimalist CSS framework.
+
+
+## License
+
+[MIT License](http://cjpatoilo.mit-license.org/) @ CJ Patoilo
