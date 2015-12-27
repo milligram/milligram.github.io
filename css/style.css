@@ -70,6 +70,7 @@ img {
 .header {
 	background-color: #f4f5f6;
 	height: 100vh;
+	padding-top: 50px;
 }
 .header .container {
 	position: relative;
@@ -88,11 +89,13 @@ img {
 	height: 15.0rem;
 	margin-bottom: 2rem;
 }
-.header .button {
-	margin-top: 6rem;
-}
 .header + section {
 	border-top: 0;
+}
+@media (min-width: 40.0rem) {
+	.header .button {
+		margin-top: 6rem;
+	}
 }
 
 
