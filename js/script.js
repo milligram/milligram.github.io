@@ -4,6 +4,7 @@
 
 	var i,
 		$description 		= document.querySelector('.description'),
+		$download 		= document.querySelector('.download'),
 		$popoverLinks 	= document.querySelectorAll('[data-popover]'),
 		$popovers			= document.querySelectorAll('.popover'),
 		$codeSnippets 	= document.querySelectorAll('.code-content'),
@@ -45,11 +46,17 @@
 	}
 
 	function getVersion() {
-		if ($description) {
+		if ($description || $download) {
 			request.open('GET', '//raw.githubusercontent.com/milligram/milligram/master/package.json', true);
 			request.onload = function() {
-				if (this.status >= 200 && this.status < 400) $description.innerHTML = $description.innerHTML+' <br><i><small>Currently v'+JSON.parse( this.response ).version+'</small></i>';
-				else console.log( '// There was a connection error of some sort' );
+				if (this.status >= 200 && this.status < 400) {
+					var version = JSON.parse( this.response ).version;
+					if ($description) $description.innerHTML = $description.innerHTML+' <br><i><small>Currently v'+version+'</small></i>';
+					$download.setAttribute('href', 'https://github.com/milligram/milligram/archive/v'+version+'.zip');
+				}
+				else {
+					console.log( '// There was a connection error of some sort' );
+				}
 			};
 			request.send();
 		}
