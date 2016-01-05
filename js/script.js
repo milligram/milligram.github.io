@@ -8,6 +8,7 @@
 		$popoverLinks 	= document.querySelectorAll('[data-popover]'),
 		$popovers			= document.querySelectorAll('.popover'),
 		$codeSnippets 	= document.querySelectorAll('.code-content'),
+		$shareButtons 	= document.querySelectorAll('.share-dialog'),
 		request 			= new XMLHttpRequest(),
 		entityMapObject 	= { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': '&quot;', "'": '&#39;', "/": '&#x2F;' };
 
@@ -17,6 +18,7 @@
 		buildSnippets();
 		getVersion();
 		googleAnalytics();
+		shareDialog();
 	}
 
 	function closePopover(e) {
@@ -70,6 +72,17 @@
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-24389952-15', 'auto');
 			ga('send', 'pageview');
+		}
+	}
+
+	function shareDialog() {
+		if ($shareButtons && window.innerWidth > 1200) {
+			for (i = 0; i < $shareButtons.length; i++) {
+				$shareButtons[i].addEventListener('click', function(e) {
+					e.preventDefault();
+					window.open(this.href, 'Share Dialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=650,height=450,top='+(screen.height/2-450/2)+',left='+(screen.width/2-650/2));
+				});
+			}
 		}
 	}
 
