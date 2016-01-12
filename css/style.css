@@ -92,9 +92,14 @@ img {
 .header + section {
 	border-top: 0;
 }
+.header .button {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
 @media (min-width: 40.0rem) {
 	.header .button {
-		margin-top: 6rem;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -523,3 +528,45 @@ pre.prettyprint .var { color: #ca4949; }
 pre.prettyprint .fun { color: #7272ca; }
 /* markdown content */
 pre.prettyprint.lang-md * { color: #655d5d !important; }
+
+
+/* Carbon
+// –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#carbonads {
+	color: #606c76;
+	display: block;
+	/*font-family: Verdana, 'Helvetica Neue', Helvetica, sans-serif;*/
+	line-height: 1.6;
+	margin: 0 auto;
+	max-width: 33.0rem;
+	background-color: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 1.5rem;
+}
+#carbonads span {
+	display: block;
+	overflow: hidden;
+}
+.carbon-text,
+.carbon-poweredby {
+	color: #606c76;
+	display: block;
+	float: right;
+	font-size: 1.2rem;
+	max-width: 50%;
+	width: 50%;
+	text-align: left;
+}
+.carbon-poweredby {
+	margin: 0;
+	margin-top: 7px;
+}
+.carbon-img {
+	float: left;
+	margin-right: 1rem;
+}
+
+
+
