@@ -561,7 +561,7 @@ pre.prettyprint.lang-md * { color: #655d5d !important; }
 }
 .carbon-poweredby {
 	margin: 0;
-	margin-top: 7px;
+	margin-top: -2.5rem;
 }
 .carbon-img {
 	float: left;
