@@ -85,10 +85,92 @@ img {
 .header .title {
 	font-family: 'Gotham Rounded A', 'Gotham Rounded B', 'Helvetica Neue', Arial, sans-serif;
 }
-.header .img {
-	height: 15.0rem;
-	margin-bottom: 2rem;
+.header .logo-milligram {
+	width: 105px;
+	margin: 0 auto 2rem;
 }
+.header .logo-milligram svg {
+	width: 100%;
+}
+.header .logo-milligram svg path {
+	fill: #9B4DCA;
+  stroke: #9B4DCA;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  stroke-dasharray: 8122;
+  animation: 7s anilligram forwards;
+}
+@-webkit-keyframes anilligram {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 8122;
+  }
+  20% {
+    fill-opacity: 0;
+    stroke: #9B4DCA;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes anilligram {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 8122;
+  }
+  20% {
+    fill-opacity: 0;
+    stroke: #9B4DCA;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-ms-keyframes anilligram {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 8122;
+  }
+  20% {
+    fill-opacity: 0;
+    stroke: #9B4DCA;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes anilligram {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 8122;
+  }
+  20% {
+    fill-opacity: 0;
+    stroke: #9B4DCA;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes anilligram {
+  0% {
+    fill-opacity: 0;
+    stroke-dashoffset: 8122;
+  }
+  20% {
+    fill-opacity: 0;
+    stroke: #9B4DCA;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
 .header + section {
 	border-top: 0;
 }
@@ -567,6 +649,3 @@ pre.prettyprint.lang-md * { color: #655d5d !important; }
 	float: left;
 	margin-right: 1rem;
 }
-
-
-
