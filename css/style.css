@@ -69,16 +69,15 @@ img {
 
 .header {
 	background-color: #f4f5f6;
-	height: 100vh;
-	padding-top: 50px;
+	padding-top: 1rem;
+}
+@media (min-width: 40.0rem) {
+	.header {
+		padding-top: 5rem;
+	}
 }
 .header .container {
 	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
 	border-top: 0;
 	text-align: center;
 }
