@@ -554,9 +554,16 @@ pre.prettyprint.lang-md * { color: #655d5d !important; }
 	display: block;
 	float: right;
 	font-size: 1.2rem;
-	max-width: 50%;
-	width: 50%;
+	max-width: 44%;
+	width: 44%;
 	text-align: left;
+}
+@media (min-width: 40.0rem) {
+	.carbon-text,
+	.carbon-poweredby {
+		max-width: 52%;
+		width: 52%;
+	}
 }
 .carbon-poweredby {
 	margin: 0;
