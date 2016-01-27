@@ -1,11 +1,11 @@
-# [Milligram](http://milligram.github.io)
+# [Milligram](https://milligram.github.io)
 
 | A minimalist CSS framework.
 
 [![Build Status](https://travis-ci.org/milligram/milligram.svg?branch=master)](https://travis-ci.org/milligram/milligram)
 [![GitHub version](https://badge.fury.io/gh/milligram%2Fmilligram.svg)](https://badge.fury.io/gh/milligram%2Fmilligram)
 [![Bower version](https://badge.fury.io/bo/milligram.svg)](https://badge.fury.io/bo/milligram)
-[![npm version](https://badge.fury.io/js/milligram.svg)](http://badge.fury.io/js/milligram)
+[![npm version](https://badge.fury.io/js/milligram.svg)](https://badge.fury.io/js/milligram)
 [![Dependencies Status](https://david-dm.org/milligram/milligram.svg)](https://travis-ci.org/milligram/milligram)
 
 
@@ -31,19 +31,19 @@ $ npm install milligram
 
 ## Table of Contents
 
-- [Getting Started](http://milligram.github.io/#getting-started)
-- [Typography](http://milligram.github.io/#typography)
-- [Blockquotes](http://milligram.github.io/#blockquotes)
-- [Buttons](http://milligram.github.io/#buttons)
-- [Lists](http://milligram.github.io/#lists)
-- [Forms](http://milligram.github.io/#forms)
-- [Tables](http://milligram.github.io/#tables)
-- [Grids](http://milligram.github.io/#grids)
-- [Codes](http://milligram.github.io/#codes)
-- [Utilities](http://milligram.github.io/#utilities)
-- [Tips](http://milligram.github.io/#tips)
-- [Browser Support](http://milligram.github.io/#browser-support)
-- [Examples](http://milligram.github.io/#examples)
+- [Getting Started](https://milligram.github.io/#getting-started)
+- [Typography](https://milligram.github.io/#typography)
+- [Blockquotes](https://milligram.github.io/#blockquotes)
+- [Buttons](https://milligram.github.io/#buttons)
+- [Lists](https://milligram.github.io/#lists)
+- [Forms](https://milligram.github.io/#forms)
+- [Tables](https://milligram.github.io/#tables)
+- [Grids](https://milligram.github.io/#grids)
+- [Codes](https://milligram.github.io/#codes)
+- [Utilities](https://milligram.github.io/#utilities)
+- [Tips](https://milligram.github.io/#tips)
+- [Browser Support](https://milligram.github.io/#browser-support)
+- [Examples](https://milligram.github.io/#examples)
 
 
 ## Contributing
@@ -60,4 +60,4 @@ Help improve these docs. Open an [issue](https://github.com/milligram/milligram/
 
 ## License
 
-[MIT License](http://cjpatoilo.mit-license.org/) @ CJ Patoilo
+[MIT License](https://cjpatoilo.mit-license.org/) @ CJ Patoilo
