@@ -9,6 +9,7 @@
 		$popovers			= document.querySelectorAll('.popover'),
 		$codeSnippets 	= document.querySelectorAll('.code-content'),
 		$shareButtons 	= document.querySelectorAll('.share-dialog'),
+		$anchors			= document.querySelectorAll('a'),
 		request 			= new XMLHttpRequest(),
 		entityMapObject 	= { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': '&quot;', "'": '&#39;', "/": '&#x2F;' };
 
@@ -19,6 +20,7 @@
 		getVersion();
 		googleAnalytics();
 		shareDialog();
+		localhost();
 	}
 
 	function closePopover(e) {
@@ -83,6 +85,12 @@
 					window.open(this.href, 'Share Dialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=650,height=450,top='+(screen.height/2-450/2)+',left='+(screen.width/2-650/2));
 				});
 			}
+		}
+	}
+
+	function localhost() {
+		if (window.location.hostname === 'localhost') {
+			for (i = 0; i < $anchors.length; i++) $anchors[i].href = $anchors[i].href.replace('https://milligram.github.io', 'http://localhost:8100');
 		}
 	}
 
