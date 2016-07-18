@@ -539,10 +539,15 @@ pre.prettyprint.lang-md * { color: #655d5d !important; }
 	line-height: 1.6;
 	margin: 0 auto;
 	max-width: 33.0rem;
-	background-color: #fff;
+	background-color: #f4f5f6;
 	border-radius: 4px;
+	margin-bottom: 2.0rem;
 	overflow: hidden;
 	padding: 1.5rem;
+}
+#home #carbonads {
+	background-color: #fff;
+	margin-bottom: 0;
 }
 #carbonads span {
 	display: block;
