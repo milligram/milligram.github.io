@@ -1,12 +1,14 @@
-# [Milligram](https://milligram.github.io)
+<p align="center">
+	<a href="http://milligram.github.io"><img width="100%" src="https://raw.githubusercontent.com/milligram/milligram.github.io/master/img/thumbnail.jpg" alt="Milligram - A minimalist CSS framework"></a>
+</p>
 
-| A minimalist CSS framework.
+> A minimalist CSS framework.
 
 [![Build Status](https://travis-ci.org/milligram/milligram.svg?branch=master)](https://travis-ci.org/milligram/milligram)
-[![GitHub version](https://badge.fury.io/gh/milligram%2Fmilligram.svg)](https://badge.fury.io/gh/milligram%2Fmilligram)
-[![Bower version](https://badge.fury.io/bo/milligram.svg)](https://badge.fury.io/bo/milligram)
-[![npm version](https://badge.fury.io/js/milligram.svg)](https://badge.fury.io/js/milligram)
 [![Dependencies Status](https://david-dm.org/milligram/milligram.svg)](https://travis-ci.org/milligram/milligram)
+[![npm version](https://badge.fury.io/js/milligram.svg)](https://badge.fury.io/js/milligram)
+[![Bower version](https://badge.fury.io/bo/milligram.svg)](https://badge.fury.io/bo/milligram)
+[![Gitter chat](https://img.shields.io/badge/gitter-join_the_chat-4cc61e.svg)](https://gitter.im/milligram/milligram)
 
 
 ## Why it's awesome?
@@ -31,26 +33,26 @@ $ npm install milligram
 
 ## Table of Contents
 
-- [Getting Started](https://milligram.github.io/#getting-started)
-- [Typography](https://milligram.github.io/#typography)
-- [Blockquotes](https://milligram.github.io/#blockquotes)
-- [Buttons](https://milligram.github.io/#buttons)
-- [Lists](https://milligram.github.io/#lists)
-- [Forms](https://milligram.github.io/#forms)
-- [Tables](https://milligram.github.io/#tables)
-- [Grids](https://milligram.github.io/#grids)
-- [Codes](https://milligram.github.io/#codes)
-- [Utilities](https://milligram.github.io/#utilities)
-- [Tips](https://milligram.github.io/#tips)
-- [Browser Support](https://milligram.github.io/#browser-support)
-- [Examples](https://milligram.github.io/#examples)
+- [Getting Started](http://milligram.github.io/#getting-started)
+- [Typography](http://milligram.github.io/#typography)
+- [Blockquotes](http://milligram.github.io/#blockquotes)
+- [Buttons](http://milligram.github.io/#buttons)
+- [Lists](http://milligram.github.io/#lists)
+- [Forms](http://milligram.github.io/#forms)
+- [Tables](http://milligram.github.io/#tables)
+- [Grids](http://milligram.github.io/#grids)
+- [Codes](http://milligram.github.io/#codes)
+- [Utilities](http://milligram.github.io/#utilities)
+- [Tips](http://milligram.github.io/#tips)
+- [Browser Support](http://milligram.github.io/#browser-support)
+- [Examples](http://milligram.github.io/#examples)
 
 
 ## Contributing
 
-Want to contribute? Follow these [recommendations](/milligram/milligram/blob/master/contributing.md).
+Want to contribute? Follow these [recommendations](https://github.com/milligram/milligram/blob/master/.github/contributing.md).
 
 
 ## License
 
-Designed with ♥ by [CJ Patoilo](http://cjpatoilo.com). Licensed under the [MIT License](https://cjpatoilo.mit-license.org).
+Designed with ♥ by [CJ Patoilo](http://cjpatoilo.com). Licensed under the [MIT License](http://cjpatoilo.mit-license.org).
