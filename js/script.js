@@ -11,7 +11,8 @@
 		$shareButtons 	= document.querySelectorAll('.share-dialog'),
 		$anchors			= document.querySelectorAll('a'),
 		request 			= new XMLHttpRequest(),
-		entityMapObject 	= { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': '&quot;', "'": '&#39;', "/": '&#x2F;' };
+		entityMapObject 	= { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': '&quot;', "'": '&#39;', "/": '&#x2F;' },
+		window.isLocalhost = window.location.hostname === 'localhost';
 
 	function init() {
 		for (i = 0; i < $popoverLinks.length; i++) $popoverLinks[i].addEventListener('click', openPopover);
@@ -21,6 +22,7 @@
 		googleAnalytics();
 		shareDialog();
 		localhost();
+		rwdAnalytics();
 	}
 
 	function closePopover(e) {
@@ -67,7 +69,7 @@
 	}
 
 	function googleAnalytics() {
-		if ( window.location.hostname !== 'localhost' ) {
+		if (!window.isLocalhost) {
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -89,8 +91,19 @@
 	}
 
 	function localhost() {
-		if (window.location.hostname === 'localhost') {
+		if (window.isLocalhost) {
 			for (i = 0; i < $anchors.length; i++) $anchors[i].href = $anchors[i].href.replace('https://milligram.github.io', 'http://localhost:8100');
+		}
+	}
+
+	function rwdAnalytics() {
+		if (!window.isLocalhost) {
+              firebase.initializeApp({
+                apiKey: 'AIzaSyAT5nFMDrKbyNl6HMk3utp55ajhjh7r7II',
+                authDomain: 'rwd-milligram.firebaseapp.com',
+                databaseURL: 'https://rwd-milligram.firebaseio.com',
+                storageBucket: ''
+              });
 		}
 	}
 
