@@ -12,7 +12,7 @@
 		$anchors			= document.querySelectorAll('a'),
 		request 			= new XMLHttpRequest(),
 		entityMapObject 	= { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': '&quot;', "'": '&#39;', "/": '&#x2F;' },
-		window.isLocalhost = window.location.hostname === 'localhost';
+		isLocalhost = window.location.hostname === 'localhost';
 
 	function init() {
 		for (i = 0; i < $popoverLinks.length; i++) $popoverLinks[i].addEventListener('click', openPopover);
@@ -22,15 +22,14 @@
 		googleAnalytics();
 		shareDialog();
 		localhost();
-		rwdAnalytics();
 	}
 
-	function closePopover(e) {
+	function closePopover(event) {
 		for (i = 0; i < $popovers.length; i++) $popovers[i].classList.remove('popover-open');
 	}
 
-	function openPopover(e) {
-		e.preventDefault();
+	function openPopover(event) {
+		event.preventDefault();
 		if (document.querySelector(this.getAttribute('href')).classList.contains('popover-open')) {
 			document.querySelector(this.getAttribute('href')).classList.remove('popover-open');
 		}
@@ -38,7 +37,7 @@
 			closePopover();
 			document.querySelector(this.getAttribute('href')).classList.add('popover-open');
 		}
-		e.stopImmediatePropagation();
+		event.stopImmediatePropagation();
 	}
 
 	function escapeHtml(string) {
@@ -69,10 +68,9 @@
 	}
 
 	function googleAnalytics() {
-		if (!window.isLocalhost) {
+		if (!isLocalhost) {
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-24389952-15', 'auto');
 			ga('send', 'pageview');
@@ -91,19 +89,8 @@
 	}
 
 	function localhost() {
-		if (window.isLocalhost) {
-			for (i = 0; i < $anchors.length; i++) $anchors[i].href = $anchors[i].href.replace('https://milligram.github.io', 'http://localhost:8100');
-		}
-	}
-
-	function rwdAnalytics() {
-		if (!window.isLocalhost) {
-              firebase.initializeApp({
-                apiKey: 'AIzaSyAT5nFMDrKbyNl6HMk3utp55ajhjh7r7II',
-                authDomain: 'rwd-milligram.firebaseapp.com',
-                databaseURL: 'https://rwd-milligram.firebaseio.com',
-                storageBucket: ''
-              });
+		if (isLocalhost) {
+			for (i = 0; i < $anchors.length; i++) $anchors[i].href = $anchors[i].href.replace('https://milligram.github.io', 'http://localhost:3000');
 		}
 	}
 
