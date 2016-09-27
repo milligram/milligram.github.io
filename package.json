@@ -21,9 +21,20 @@
 		"postinstall": "bower install",
 		"prestart": "npm install",
 		"prepush": "chmod +x ./.bin/prepush.sh && ./.bin/prepush.sh",
-		"build": "rm -rf dist && mkdir dist && cp -rf src/* dist && cp -rf bower_components dist",
-		"watch": "onchange src -- npm run build",
+		"clean": "rm -rf dist && mkdir dist",
+		"build:templates": "cp -rf src/*.{html,json} dist",
+		"build:styles": "cp -rf src/styles dist",
+		"build:scripts": "cp -rf src/scripts dist",
+		"build:images": "cp -rf src/images dist",
+		"build:vendors": "cp -rf bower_components dist",
+		"build": "run-s clean build:templates build:styles build:scripts build:images build:vendors",
+		"watch:templates": "onchange 'src/*.{html,json}' -- npm run build:templates",
+		"watch:styles": "onchange 'src/styles' -- npm run build:styles",
+		"watch:scripts": "onchange 'src/scripts' -- npm run build:scripts",
+		"watch:images": "onchange 'src/images' -- npm run build:images",
+		"watch:vendors": "onchange 'bower_components' -- npm run build:vendors",
+		"watch": "run-p watch:templates watch:styles watch:scripts watch:images watch:vendors serve",
 		"serve": "browser-sync start -s dist -f dist",
-		"start": "run-p build watch serve"
+		"start": "run-s build watch"
 	}
 }
