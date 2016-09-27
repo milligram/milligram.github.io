@@ -1,0 +1,38 @@
+#!/bin/bash
+# set -e # Exit with nonzero exit code if anything fails
+
+# Compile
+npm install
+npm run build
+
+# Define
+SOURCE_BRANCH="gh-pages"
+TARGET_BRANCH="master"
+
+# Informations
+REPO=`git config remote.origin.url`
+SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+SHA=`git rev-parse --verify HEAD`
+
+# Prepare
+git clone -b $TARGET_BRANCH --single-branch $REPO $TARGET_BRANCH
+cd $TARGET_BRANCH
+rm -rf *
+cp -rf ../dist/* ./
+
+# Diff
+if [ -z `git diff --exit-code` ]; then
+    echo "No changes on this push; exiting."
+    exit 0
+fi
+
+# Commit
+git add .
+git commit -m "Deploy to GitHub Pages: ${SHA}"
+
+# Push
+git push origin $TARGET_BRANCH
+
+# Delete
+cd ..
+rm -rf $TARGET_BRANCH

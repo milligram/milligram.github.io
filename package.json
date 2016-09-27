@@ -20,6 +20,7 @@
 	"scripts": {
 		"postinstall": "bower install",
 		"prestart": "npm install",
+		"prepush": "chmod +x ./.bin/prepush && ./.bin/prepush",
 		"build": "rm -rf dist && mkdir dist && cp -rf src/* dist && cp -rf bower_components dist",
 		"watch": "onchange src -- npm run build",
 		"serve": "browser-sync start -s dist -f dist",
