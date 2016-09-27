@@ -14,18 +14,24 @@
 		"bower": "^1.7.9",
 		"browser-sync": "^2.12.8",
 		"husky": "^0.11.8",
+		"imagemin-cli": "^3.0.0",
 		"npm-run-all": "^2.1.1",
-		"onchange": "^2.4.0"
+		"onchange": "^2.4.0",
+		"svg-sprite-generator": "^0.0.7",
+		"svgo": "^0.6.6"
 	},
 	"scripts": {
 		"postinstall": "bower install",
 		"prestart": "npm install",
 		"prepush": "chmod +x ./.bin/prepush.sh && ./.bin/prepush.sh",
 		"clean": "rm -rf dist && mkdir dist",
+		"imagemin": "imagemin src/images/* -o dist/images",
+		"svgo": "svgo -f src/images/icons && mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
+		"serve": "browser-sync start -s dist -f dist",
 		"build:templates": "cp -rf src/*.{html,json} dist",
 		"build:styles": "cp -rf src/styles dist",
 		"build:scripts": "cp -rf src/scripts dist",
-		"build:images": "cp -rf src/images dist",
+		"build:images": "run-s imagemin svgo",
 		"build:vendors": "cp -rf bower_components dist",
 		"build": "run-s clean build:templates build:styles build:scripts build:images build:vendors",
 		"watch:templates": "onchange 'src/*.{html,json}' -- npm run build:templates",
@@ -34,7 +40,6 @@
 		"watch:images": "onchange 'src/images' -- npm run build:images",
 		"watch:vendors": "onchange 'bower_components' -- npm run build:vendors",
 		"watch": "run-p watch:templates watch:styles watch:scripts watch:images watch:vendors serve",
-		"serve": "browser-sync start -s dist -f dist",
 		"start": "run-s build watch"
 	}
 }
