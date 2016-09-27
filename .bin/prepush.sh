@@ -5,25 +5,23 @@
 npm install
 npm run build
 
-# Define
-SOURCE_BRANCH="gh-pages"
-TARGET_BRANCH="master"
-
-# Informations
+# Statement
+BRANCH="master"
 REPO=`git config remote.origin.url`
-SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
 # Prepare
-git clone -b $TARGET_BRANCH --single-branch $REPO $TARGET_BRANCH
-cd $TARGET_BRANCH
+git clone -b $BRANCH --single-branch $REPO $BRANCH
+cd $BRANCH
 rm -rf *
 cp -rf ../dist/* ./
 
 # Diff
 if [ -z `git diff --exit-code` ]; then
-    echo "No changes on this push; exiting."
-    exit 0
+	cd ..
+	rm -rf $BRANCH
+	echo "No changes on this push, exiting."
+	exit 0
 fi
 
 # Commit
@@ -31,8 +29,10 @@ git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Push
-git push origin $TARGET_BRANCH
+git push origin $BRANCH
 
-# Delete
+# Clean
 cd ..
-rm -rf $TARGET_BRANCH
+rm -rf $BRANCH
+echo "Deployed successfully on this push, congrats!"
+exit 0
