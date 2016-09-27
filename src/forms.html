@@ -35,10 +35,10 @@
 		<link rel="canonical" href="https://milligram.github.io/">
 		<link rel="image_src" href="https://milligram.github.io/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="https://milligram.github.io/css/milligram.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
@@ -99,42 +99,54 @@
 				</section>
 			</nav>
 
-			<section class="container" id="getting-started">
+			<section class="container" id="forms">
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio" id="_carbonads_js"></script>
-				<h5 class="title">Getting Started</h5>
-				<p>There are some ways to get started. First, see all download options available below, then choose the most suitable option for your need. Now you should add the main file of the Milligram and the CSS Reset in the header of your project. Just that!</p>
-				<p><a class="button download" href="https://github.com/milligram/milligram/archive/master.zip" title="Download Milligram">Download Milligram</a></p>
+				<h5 class="title">Forms</h5>
+				<p>The Form has never been exactly fun, and it can be downright painful on a mobile device with its on-screen keyboard. Milligram help to make this much easier with design focused on the user experience.</p>
 				<div class="example">
-					<p><strong>Install with Bower</strong></p>
-					<p>Milligram is available to install using Bower.</p>
-					<p><pre class="code prettyprint"><code class="code-content">$ bower install milligram</code></pre></p>
-					<p><strong>Install with npm</strong></p>
-					<p>Milligram is also available to install using npm.</p>
-					<p><pre class="code prettyprint"><code class="code-content">$ npm install milligram</code></pre></p>
-					<p><strong>What's included</strong></p>
-					<p>Once downloaded, extract the compressed folder to see the main file in the uncompressed and minified version.</p>
-					<p><pre class="code prettyprint lang-md"><code class="code-content">milligram/
-├── demo/
-│   └── index.html
-├── dist/
-│   ├── milligram.css
-│   └── milligram.min.css
-├── license
-└── readme.md
-</code></pre></p>
-					<p><strong>Usage</strong></p>
-					<p>First, use any method mentioned above to download Milligram. Then, just add these tags in the head. Milligram is also available via <a href="https://cdnjs.com/libraries/milligram" title="Milligram is also available via CDN" target="blank">CDN</a>.</p>
-					<p><pre class="code prettyprint"><code class="code-content"><!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-
-<!-- CSS Reset -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-
-<!-- Milligram CSS minified -->
-<link rel="stylesheet" href="milligram/dist/milligram.min.css">
-
-<!-- You should properly set the path from the main file. --></code></pre></p>
+					<form>
+						<fieldset>
+							<label for="nameField">Name</label>
+							<input type="text" placeholder="CJ Patoilo" id="nameField">
+							<label for="ageRangeField">Age Range</label>
+							<select id="ageRangeField">
+								<option value="0-13">0-13</option>
+								<option value="14-17">14-17</option>
+								<option value="18-23">18-23</option>
+								<option value="24+">24+</option>
+							</select>
+							<label for="commentField">Comment</label>
+							<textarea placeholder="Hi CJ &hellip;" id="commentField"></textarea>
+							<div class="float-right">
+								<input type="checkbox" id="confirmField">
+								<label class="label-inline" for="confirmField">Send a copy to yourself</label>
+							</div>
+							<input class="button-primary" type="submit" value="Send">
+						</fieldset>
+					</form>
 				</div>
+				<pre class="code prettyprint"><code class="code-content"><form>
+  <fieldset>
+    <label for="nameField">Name</label>
+    <input type="text" placeholder="CJ Patoilo" id="nameField">
+    <label for="ageRangeField">Age Range</label>
+    <select id="ageRangeField">
+      <option value="0-13">0-13</option>
+      <option value="14-17">14-17</option>
+      <option value="18-23">18-23</option>
+      <option value="24+">24+</option>
+    </select>
+    <label for="commentField">Comment</label>
+    <textarea placeholder="Hi CJ &hellip;" id="commentField"></textarea>
+    <div class="float-right">
+      <input type="checkbox" id="confirmField">
+      <label class="label-inline" for="confirmField">Send a copy to yourself</label>
+    </div>
+    <input class="button-primary" type="submit" value="Send">
+  </fieldset>
+</form>
+
+<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it --></code></pre>
 			</section>
 
 			<section class="container" id="examples">
@@ -171,8 +183,8 @@
 
 		</main>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-		<script src="js/script.js"></script>
+		<script src="bower_components/code-prettify/src/run_prettify.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="ed5b6ca01e3e4e6a98b6e97142e06a63" data-app-id="caba356019"></script>
 
 	</body>

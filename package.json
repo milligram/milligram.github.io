@@ -1,0 +1,28 @@
+{
+	"name": "milligram.github.io",
+	"version": "1.2.0",
+	"description": "Milligram website",
+	"homepage": "https://milligram.github.io",
+	"repository": "milligram/milligram.github.io",
+	"license": "MIT",
+	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
+	"private": "true",
+	"engines": {
+		"node": "^6.0.0"
+	},
+	"devDependencies": {
+		"bower": "^1.7.9",
+		"browser-sync": "^2.12.8",
+		"husky": "^0.11.8",
+		"npm-run-all": "^2.1.1",
+		"onchange": "^2.4.0"
+	},
+	"scripts": {
+		"postinstall": "bower install",
+		"prestart": "npm install",
+		"build": "rm -rf dist && mkdir dist && cp -rf src/* dist && cp -rf bower_components dist",
+		"watch": "onchange src -- npm run build",
+		"serve": "browser-sync start -s dist -f dist",
+		"start": "run-p build watch serve"
+	}
+}

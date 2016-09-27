@@ -35,10 +35,10 @@
 		<link rel="canonical" href="https://milligram.github.io/">
 		<link rel="image_src" href="https://milligram.github.io/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="https://milligram.github.io/css/milligram.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
@@ -99,54 +99,49 @@
 				</section>
 			</nav>
 
-			<section class="container" id="forms">
+			<section class="container" id="lists">
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio" id="_carbonads_js"></script>
-				<h5 class="title">Forms</h5>
-				<p>The Form has never been exactly fun, and it can be downright painful on a mobile device with its on-screen keyboard. Milligram help to make this much easier with design focused on the user experience.</p>
-				<div class="example">
-					<form>
-						<fieldset>
-							<label for="nameField">Name</label>
-							<input type="text" placeholder="CJ Patoilo" id="nameField">
-							<label for="ageRangeField">Age Range</label>
-							<select id="ageRangeField">
-								<option value="0-13">0-13</option>
-								<option value="14-17">14-17</option>
-								<option value="18-23">18-23</option>
-								<option value="24+">24+</option>
-							</select>
-							<label for="commentField">Comment</label>
-							<textarea placeholder="Hi CJ &hellip;" id="commentField"></textarea>
-							<div class="float-right">
-								<input type="checkbox" id="confirmField">
-								<label class="label-inline" for="confirmField">Send a copy to yourself</label>
-							</div>
-							<input class="button-primary" type="submit" value="Send">
-						</fieldset>
-					</form>
+				<h5 class="title">Lists</h5>
+				<p>The List is a very versatile and common way to display items. Milligram has three types of lists: The unordered list use <code>&lt;ul&gt;</code> element will be marked with a outline circles, the ordered list use <code>&lt;ol&gt;</code> element and your items will be marked with numbers, the description list use <code>&lt;dl&gt;</code> element and your items will not be marking, only spacings.</p>
+				<div class="row example">
+					<div class="column">
+						<ul>
+							<li>Unordered list item 1</li>
+							<li>Unordered list item 2</li>
+						</ul>
+					</div>
+					<div class="column">
+						<ol>
+							<li>Ordered list item 1</li>
+							<li>Ordered list item 2</li>
+						</ol>
+					</div>
+					<div class="column">
+						<dl>
+							<dt>Description list item 1</dt>
+							<dd>Description list item 1.1</dd>
+						</dl>
+					</div>
 				</div>
-				<pre class="code prettyprint"><code class="code-content"><form>
-  <fieldset>
-    <label for="nameField">Name</label>
-    <input type="text" placeholder="CJ Patoilo" id="nameField">
-    <label for="ageRangeField">Age Range</label>
-    <select id="ageRangeField">
-      <option value="0-13">0-13</option>
-      <option value="14-17">14-17</option>
-      <option value="18-23">18-23</option>
-      <option value="24+">24+</option>
-    </select>
-    <label for="commentField">Comment</label>
-    <textarea placeholder="Hi CJ &hellip;" id="commentField"></textarea>
-    <div class="float-right">
-      <input type="checkbox" id="confirmField">
-      <label class="label-inline" for="confirmField">Send a copy to yourself</label>
-    </div>
-    <input class="button-primary" type="submit" value="Send">
-  </fieldset>
-</form>
+				<pre class="code prettyprint"><code class="code-content"><!-- Unordered list -->
+<ul>
+  <li>Unordered list item 1</li>
+  <li>Unordered list item 2</li>
+</ul>
 
-<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it --></code></pre>
+<!-- Ordered list -->
+<ol>
+  <li>Ordered list item 1</li>
+  <li>Ordered list item 2</li>
+</ol>
+
+<!-- Description list -->
+<dl>
+  <dt>Description list item 1</dt>
+  <dd>Description list item 1.1</dd>
+</dl>
+
+<!-- Easily change any <dl>, <ul> or an <ol> to get clear lists, number lists or outline circles. --></code></pre>
 			</section>
 
 			<section class="container" id="examples">
@@ -183,8 +178,8 @@
 
 		</main>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-		<script src="js/script.js"></script>
+		<script src="bower_components/code-prettify/src/run_prettify.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="ed5b6ca01e3e4e6a98b6e97142e06a63" data-app-id="caba356019"></script>
 
 	</body>

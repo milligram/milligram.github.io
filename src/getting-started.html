@@ -35,10 +35,10 @@
 		<link rel="canonical" href="https://milligram.github.io/">
 		<link rel="image_src" href="https://milligram.github.io/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="https://milligram.github.io/css/milligram.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
@@ -99,84 +99,42 @@
 				</section>
 			</nav>
 
-			<section class="container" id="tips">
+			<section class="container" id="getting-started">
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio" id="_carbonads_js"></script>
-				<h5 class="title">Tips</h5>
-				<p>Tips, techniques, and best practice on using Cascading Style Sheets.</p>
-				<p><strong>Mobile First</strong></p>
-				<p>The Mobile First is the design strategy that takes priority development for mobile devices like smartphones and tablets. It means all styles outside of a media queries apply to all devices, then larger screens are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. Milligram use some breakpoints like these:</p>
-				<div class="example row">
-					<ul>
-						<li>Larger than <strong>Mobile</strong> screen: 40.0rem <span class="heading-font-size">(640px)</span></li>
-						<li>Larger than <strong>Tablet</strong> screen: 80.0rem <span class="heading-font-size">(1280px)</span></li>
-						<li>Larger than <strong>Desktop</strong> screen: 120.0rem <span class="heading-font-size">(1920px)</span></li>
-					</ul>
+				<h5 class="title">Getting Started</h5>
+				<p>There are some ways to get started. First, see all download options available below, then choose the most suitable option for your need. Now you should add the main file of the Milligram and the CSS Reset in the header of your project. Just that!</p>
+				<p><a class="button download" href="https://github.com/milligram/milligram/archive/master.zip" title="Download Milligram">Download Milligram</a></p>
+				<div class="example">
+					<p><strong>Install with Bower</strong></p>
+					<p>Milligram is available to install using Bower.</p>
+					<p><pre class="code prettyprint"><code class="code-content">$ bower install milligram</code></pre></p>
+					<p><strong>Install with npm</strong></p>
+					<p>Milligram is also available to install using npm.</p>
+					<p><pre class="code prettyprint"><code class="code-content">$ npm install milligram</code></pre></p>
+					<p><strong>What's included</strong></p>
+					<p>Once downloaded, extract the compressed folder to see the main file in the uncompressed and minified version.</p>
+					<p><pre class="code prettyprint lang-md"><code class="code-content">milligram/
+├── demo/
+│   └── index.html
+├── dist/
+│   ├── milligram.css
+│   └── milligram.min.css
+├── license
+└── readme.md
+</code></pre></p>
+					<p><strong>Usage</strong></p>
+					<p>First, use any method mentioned above to download Milligram. Then, just add these tags in the head. Milligram is also available via <a href="https://cdnjs.com/libraries/milligram" title="Milligram is also available via CDN" target="blank">CDN</a>.</p>
+					<p><pre class="code prettyprint"><code class="code-content"><!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+<!-- CSS Reset -->
+<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+
+<!-- Milligram CSS minified -->
+<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+
+<!-- You should properly set the path from the main file. --></code></pre></p>
 				</div>
-				<pre class="code prettyprint lang-css"><code class="code-content">/* Mobile First Media Queries */
-
-/* Base style */
-{ ... }
-
-/* Larger than mobile screen */
-@media (min-width: 40.0rem) { ... }
-
-/* Larger than tablet screen */
-@media (min-width: 80.0rem) { ... }
-
-/* Larger than desktop screen */
-@media (min-width: 120.0rem) { ... }</code></pre>
-				<p><strong>Extending The Inheritances</strong></p>
-				<p>The style of an element can be defined in several different locations, which interact in a complex way. It is form of interaction makes CSS powerful, but it can make it confusing and difficult to debug.</p>
-				<div class="example row">
-					<div class="column">
-						<a href="#" class="button">Default .button</a>
-						<a href="#" class="button button-outline">Outlined .button</a>
-						<a href="#" class="button button-clear">Clear .button</a>
-					</div>
-					<div class="column">
-						<a href="#" class="button button-black">.button-black</a>
-						<a href="#" class="button button-black button-outline">.button-black</a>
-						<a href="#" class="button button-black button-clear">.button-black</a>
-					</div>
-					<div class="column column-20">
-						<a href="#" class="button button-small">.button-small</a>
-						<a href="#" class="button button-small button-outline">.button-small</a>
-						<a href="#" class="button button-small button-clear">.button-small</a>
-					</div>
-					<div class="column">
-						<a href="#" class="button button-large">.button-large</a>
-						<a href="#" class="button button-large button-outline">.button-large</a>
-						<a href="#" class="button button-large button-clear">.button-large</a>
-					</div>
-				</div>
-				<pre class="code prettyprint lang-css"><code class="code-content">/* Extending The Inheritances */
-
-/* Applying color variation */
-.button-black {
-  background-color: black;
-  border-color: black;
-}
-.button-black.button-outline {
-  color: black;
-}
-.button-black.button-clear {
-  color: black;
-}
-
-/* Applying size variation */
-.button-small {
-  font-size: .8rem;
-  height: 2.8rem;
-  line-height: 2.8rem;
-  padding: 0 1.5rem;
-}
-
-.button-large {
-  font-size: 1.4rem;
-  height: 4.5rem;
-  line-height: 4.5rem;
-  padding: 0 2rem;
-}</code></pre>
 			</section>
 
 			<section class="container" id="examples">
@@ -213,8 +171,8 @@
 
 		</main>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-		<script src="js/script.js"></script>
+		<script src="bower_components/code-prettify/src/run_prettify.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="ed5b6ca01e3e4e6a98b6e97142e06a63" data-app-id="caba356019"></script>
 
 	</body>

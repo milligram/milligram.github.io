@@ -35,10 +35,10 @@
 		<link rel="canonical" href="https://milligram.github.io/">
 		<link rel="image_src" href="https://milligram.github.io/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="https://milligram.github.io/css/milligram.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
@@ -99,41 +99,126 @@
 				</section>
 			</nav>
 
-			<section class="container" id="typography">
+			<section class="container" id="grids">
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio" id="_carbonads_js"></script>
-				<h5 class="title">Typography</h5>
-				<p>CSS3 introduces a few new units, including the <code>rem</code> unit, which stands for <em>"root em"</em>. The <code>rem</code> unit is relative to the font-size of the root element <code>&lt;html&gt;</code>. That means that we can define a single font size on the root element, and define all <code>rem</code> units to be a percentage of that. The typography has <code>font-size</code> defined in 1.6rem (16px) and <code>line-height</code> in 1.6 (24px). <strong>Milligram</strong> uses the <code>font-family</code> <a target="blank" href="https://www.google.com/fonts/specimen/Roboto" title="Roboto by Christian Robertson">Roboto</a>, created by <u>Christian Robertson</u>, and provided by Google.</p>
+				<h5 class="title">Grids</h5>
+				<p>The Grid is a fluid system with a max width of <code>112.0rem</code> <small>(1120px)</small>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Milligram is different than most because of its use of the <strong>CSS Flexible Box Layout Module standard</strong>. The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add columns you want in a row, and they'll evenly take up the available space. If you want three columns, add three columns, if you want five columns, add five columns. There is no restriction on number of columns, but we advise you to follow a design pattern of grid system. See more tips on best practices in the <a href="#tips" title="Tips">tips</a>.</p>
 				<div class="example">
-					<div class="row">
-						<div class="column">
-							<h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 5.0rem (50px)</span></h1>
-							<h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 4.2rem (42px)</span></h2>
-							<h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 3.6rem (36px)</span></h3>
-							<h4>Heading<span class="heading-font-size"> <code>&lt;h4&gt;</code> 3.0rem (30px)</span></h4>
-							<h5>Heading<span class="heading-font-size"> <code>&lt;h5&gt;</code> 2.4rem (24px)</span></h5>
-							<h6>Heading<span class="heading-font-size"> <code>&lt;h6&gt;</code> 1.5rem (15px)</span></h6>
+					<div class="content">
+						<div class="row">
+							<div class="column"><span class="column-demo">.column</span></div>
+							<div class="column"><span class="column-demo">.column</span></div>
+							<div class="column"><span class="column-demo">.column</span></div>
+							<div class="column"><span class="column-demo">.column</span></div>
+						</div>
+						<div class="row">
+							<div class="column"><span class="column-demo">.column</span></div>
+							<div class="column column-50 column-offset-25"><span class="column-demo">.column-50.column-offset-25</span></div>
 						</div>
 					</div>
 				</div>
-				<pre class="code prettyprint"><code class="code-content"><!-- Base font-size and line-height -->
-<p>The base type is 1.6rem (16px) over 1.6 line height (24px)</p>
+				<pre class="code prettyprint"><code class="code-content"><!-- .container is main centered wrapper -->
+<div class="container">
 
-<!-- Other elements to text markup -->
-<a>Anchor</a>
-<em>Emphasis</em>
-<small>Small</small>
-<strong>Strong</strong>
-<u>Underline</u>
+  <div class="row">
+    <div class="column">.column</div>
+    <div class="column">.column</div>
+    <div class="column">.column</div>
+    <div class="column">.column</div>
+  </div>
 
-<!-- Default Headings -->
-<h1>Heading</h1>
-<h2>Heading</h2>
-<h3>Heading</h3>
-<h4>Heading</h4>
-<h5>Heading</h5>
-<h6>Heading</h6>
+  <div class="row">
+    <div class="column">.column</div>
+    <div class="column column-50 column-offset-25">.column column-50 column-offset-25</div>
+  </div>
 
-<!-- The base font-size is set at 62.5% for having the convenience of sizing rems in a way that is similar to using px. So basically 1.6rem = 16px. --></code></pre>
+</div>
+
+<!-- Every .column added inside a .row will automatically receive an equal amount of the available area. --></code></pre>
+
+<h5 class="title">Column Widths</h5>
+<p>Milligram's Grid system also supports specifying column widths as a ratio of the parent row's width. Append one of the percentages listed below to a <code>column-</code> class to achieve the desired layout.</p>
+<div class="example-grid example">
+	<div class="content">
+		<div class="row">
+			<div class="column column-10"><span class="column-demo">10%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-20"><span class="column-demo">20%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-25"><span class="column-demo">25%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-33"><span class="column-demo">33%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-40"><span class="column-demo">40%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-50"><span class="column-demo">50%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-60"><span class="column-demo">60%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-67"><span class="column-demo">67%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-75"><span class="column-demo">75%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-80"><span class="column-demo">80%</span></div>
+		</div>
+		<div class="row">
+			<div class="column column-90"><span class="column-demo">90%</span></div>
+		</div>
+		<div class="row">
+			<div class="column"><span class="column-demo">100%</span></div>
+		</div>
+	</div>
+</div>
+<pre class="code prettyprint"><code class="code-content"><div class="container">
+  <div class="row">
+    <div class="column column-10">10%</div>
+  </div>
+  <div class="row">
+    <div class="column column-20">20%</div>
+  </div>
+  <div class="row">
+    <div class="column column-25">25%</div>
+  </div>
+  <div class="row">
+    <!-- .column-33 or .column-34 both work for 1/3 column width -->
+    <div class="column column-33">33%</div>
+  </div>
+  <div class="row">
+    <div class="column column-40">40%</div>
+  </div>
+  <div class="row">
+    <div class="column column-50">50%</div>
+  </div>
+  <div class="row">
+    <div class="column column-60">60%</div>
+  </div>
+  <div class="row">
+    <!-- .column-66 or .column-67 both work for 2/3 column width -->
+    <div class="column column-67">67%</div>
+  </div>
+  <div class="row">
+    <div class="column column-75">75%</div>
+  </div>
+  <div class="row">
+    <div class="column column-80">80%</div>
+  </div>
+  <div class="row">
+    <div class="column column-90">90%</div>
+  </div>
+  <div class="row">
+    <div class="column">100%</div>
+  </div>
+</div></code></pre>
+
 			</section>
 
 			<section class="container" id="examples">
@@ -170,8 +255,8 @@
 
 		</main>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-		<script src="js/script.js"></script>
+		<script src="bower_components/code-prettify/src/run_prettify.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="ed5b6ca01e3e4e6a98b6e97142e06a63" data-app-id="caba356019"></script>
 
 	</body>

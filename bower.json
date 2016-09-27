@@ -1,0 +1,9 @@
+{
+	"name": "milligram.github.io",
+	"dependencies": {
+		"font-awesome": "latest",
+		"milligram": "latest",
+		"normalize.css": "~3.0.0",
+		"code-prettify": "latest"
+	}
+}

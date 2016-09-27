@@ -35,10 +35,10 @@
 		<link rel="canonical" href="https://milligram.github.io/">
 		<link rel="image_src" href="https://milligram.github.io/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="https://milligram.github.io/css/milligram.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
@@ -99,126 +99,84 @@
 				</section>
 			</nav>
 
-			<section class="container" id="grids">
+			<section class="container" id="tips">
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio" id="_carbonads_js"></script>
-				<h5 class="title">Grids</h5>
-				<p>The Grid is a fluid system with a max width of <code>112.0rem</code> <small>(1120px)</small>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Milligram is different than most because of its use of the <strong>CSS Flexible Box Layout Module standard</strong>. The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add columns you want in a row, and they'll evenly take up the available space. If you want three columns, add three columns, if you want five columns, add five columns. There is no restriction on number of columns, but we advise you to follow a design pattern of grid system. See more tips on best practices in the <a href="#tips" title="Tips">tips</a>.</p>
-				<div class="example">
-					<div class="content">
-						<div class="row">
-							<div class="column"><span class="column-demo">.column</span></div>
-							<div class="column"><span class="column-demo">.column</span></div>
-							<div class="column"><span class="column-demo">.column</span></div>
-							<div class="column"><span class="column-demo">.column</span></div>
-						</div>
-						<div class="row">
-							<div class="column"><span class="column-demo">.column</span></div>
-							<div class="column column-50 column-offset-25"><span class="column-demo">.column-50.column-offset-25</span></div>
-						</div>
+				<h5 class="title">Tips</h5>
+				<p>Tips, techniques, and best practice on using Cascading Style Sheets.</p>
+				<p><strong>Mobile First</strong></p>
+				<p>The Mobile First is the design strategy that takes priority development for mobile devices like smartphones and tablets. It means all styles outside of a media queries apply to all devices, then larger screens are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. Milligram use some breakpoints like these:</p>
+				<div class="example row">
+					<ul>
+						<li>Larger than <strong>Mobile</strong> screen: 40.0rem <span class="heading-font-size">(640px)</span></li>
+						<li>Larger than <strong>Tablet</strong> screen: 80.0rem <span class="heading-font-size">(1280px)</span></li>
+						<li>Larger than <strong>Desktop</strong> screen: 120.0rem <span class="heading-font-size">(1920px)</span></li>
+					</ul>
+				</div>
+				<pre class="code prettyprint lang-css"><code class="code-content">/* Mobile First Media Queries */
+
+/* Base style */
+{ ... }
+
+/* Larger than mobile screen */
+@media (min-width: 40.0rem) { ... }
+
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) { ... }
+
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) { ... }</code></pre>
+				<p><strong>Extending The Inheritances</strong></p>
+				<p>The style of an element can be defined in several different locations, which interact in a complex way. It is form of interaction makes CSS powerful, but it can make it confusing and difficult to debug.</p>
+				<div class="example row">
+					<div class="column">
+						<a href="#" class="button">Default .button</a>
+						<a href="#" class="button button-outline">Outlined .button</a>
+						<a href="#" class="button button-clear">Clear .button</a>
+					</div>
+					<div class="column">
+						<a href="#" class="button button-black">.button-black</a>
+						<a href="#" class="button button-black button-outline">.button-black</a>
+						<a href="#" class="button button-black button-clear">.button-black</a>
+					</div>
+					<div class="column column-20">
+						<a href="#" class="button button-small">.button-small</a>
+						<a href="#" class="button button-small button-outline">.button-small</a>
+						<a href="#" class="button button-small button-clear">.button-small</a>
+					</div>
+					<div class="column">
+						<a href="#" class="button button-large">.button-large</a>
+						<a href="#" class="button button-large button-outline">.button-large</a>
+						<a href="#" class="button button-large button-clear">.button-large</a>
 					</div>
 				</div>
-				<pre class="code prettyprint"><code class="code-content"><!-- .container is main centered wrapper -->
-<div class="container">
+				<pre class="code prettyprint lang-css"><code class="code-content">/* Extending The Inheritances */
 
-  <div class="row">
-    <div class="column">.column</div>
-    <div class="column">.column</div>
-    <div class="column">.column</div>
-    <div class="column">.column</div>
-  </div>
+/* Applying color variation */
+.button-black {
+  background-color: black;
+  border-color: black;
+}
+.button-black.button-outline {
+  color: black;
+}
+.button-black.button-clear {
+  color: black;
+}
 
-  <div class="row">
-    <div class="column">.column</div>
-    <div class="column column-50 column-offset-25">.column column-50 column-offset-25</div>
-  </div>
+/* Applying size variation */
+.button-small {
+  font-size: .8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding: 0 1.5rem;
+}
 
-</div>
-
-<!-- Every .column added inside a .row will automatically receive an equal amount of the available area. --></code></pre>
-
-<h5 class="title">Column Widths</h5>
-<p>Milligram's Grid system also supports specifying column widths as a ratio of the parent row's width. Append one of the percentages listed below to a <code>column-</code> class to achieve the desired layout.</p>
-<div class="example-grid example">
-	<div class="content">
-		<div class="row">
-			<div class="column column-10"><span class="column-demo">10%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-20"><span class="column-demo">20%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-25"><span class="column-demo">25%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-33"><span class="column-demo">33%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-40"><span class="column-demo">40%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-50"><span class="column-demo">50%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-60"><span class="column-demo">60%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-67"><span class="column-demo">67%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-75"><span class="column-demo">75%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-80"><span class="column-demo">80%</span></div>
-		</div>
-		<div class="row">
-			<div class="column column-90"><span class="column-demo">90%</span></div>
-		</div>
-		<div class="row">
-			<div class="column"><span class="column-demo">100%</span></div>
-		</div>
-	</div>
-</div>
-<pre class="code prettyprint"><code class="code-content"><div class="container">
-  <div class="row">
-    <div class="column column-10">10%</div>
-  </div>
-  <div class="row">
-    <div class="column column-20">20%</div>
-  </div>
-  <div class="row">
-    <div class="column column-25">25%</div>
-  </div>
-  <div class="row">
-    <!-- .column-33 or .column-34 both work for 1/3 column width -->
-    <div class="column column-33">33%</div>
-  </div>
-  <div class="row">
-    <div class="column column-40">40%</div>
-  </div>
-  <div class="row">
-    <div class="column column-50">50%</div>
-  </div>
-  <div class="row">
-    <div class="column column-60">60%</div>
-  </div>
-  <div class="row">
-    <!-- .column-66 or .column-67 both work for 2/3 column width -->
-    <div class="column column-67">67%</div>
-  </div>
-  <div class="row">
-    <div class="column column-75">75%</div>
-  </div>
-  <div class="row">
-    <div class="column column-80">80%</div>
-  </div>
-  <div class="row">
-    <div class="column column-90">90%</div>
-  </div>
-  <div class="row">
-    <div class="column">100%</div>
-  </div>
-</div></code></pre>
-
+.button-large {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 2rem;
+}</code></pre>
 			</section>
 
 			<section class="container" id="examples">
@@ -255,8 +213,8 @@
 
 		</main>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-		<script src="js/script.js"></script>
+		<script src="bower_components/code-prettify/src/run_prettify.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="ed5b6ca01e3e4e6a98b6e97142e06a63" data-app-id="caba356019"></script>
 
 	</body>

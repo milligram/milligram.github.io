@@ -35,10 +35,10 @@
 		<link rel="canonical" href="https://milligram.github.io/">
 		<link rel="image_src" href="https://milligram.github.io/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="https://milligram.github.io/css/milligram.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+		<link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
@@ -99,20 +99,63 @@
 				</section>
 			</nav>
 
-			<section class="container" id="utilities">
+			<section class="container" id="tables">
 				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio" id="_carbonads_js"></script>
-				<h5 class="title">Utilities</h5>
-				<p>Milligram has some functional classes to improve the performance and productivity everyday.</p>
-				<pre class="code prettyprint lang-html"><code class="code-content"><!-- Functional Classes -->
+				<h5 class="title">Tables</h5>
+				<p>The Table element represents data in two dimensions or more. We encourage the use of proper formatting with <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> to create a <code>&lt;table&gt;</code>. The code becomes cleaner without disturbing understanding.</p>
+				<div class="example">
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Age</th>
+								<th>Height</th>
+								<th>Location</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Stephen Curry</td>
+								<td>27</td>
+								<td>1,91</td>
+								<td>Akron, OH</td>
+							</tr>
+							<tr>
+								<td>Klay Thompson</td>
+								<td>25</td>
+								<td>2,01</td>
+								<td>Los Angeles, CA</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<pre class="code prettyprint"><code class="code-content"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stephen Curry</td>
+      <td>27</td>
+      <td>1,91</td>
+      <td>Akron, OH</td>
+    </tr>
+    <tr>
+      <td>Klay Thompson</td>
+      <td>25</td>
+      <td>2,01</td>
+      <td>Los Angeles, CA</td>
+    </tr>
+  </tbody>
+</table>
 
-<!-- Clear any float  -->
-<div class="clearfix">
-
-  <!-- Float either directions -->
-  <div class="float-left"></div>
-  <div class="float-right"></div>
-
-</div></code></pre>
+<!-- Prior to the creation of CSS, HTML <table> elements were often used as a method for page layout. This usage has been discouraged since HTML4, and the <table> element should not be used for layout purposes. --></code></pre>
+				<p>See more examples of <strong>tables</strong> <a href="tables.html" title="Examples about tables">here</a>.</p>
 			</section>
 
 			<section class="container" id="examples">
@@ -149,8 +192,8 @@
 
 		</main>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-		<script src="js/script.js"></script>
+		<script src="bower_components/code-prettify/src/run_prettify.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js" data-org-id="ed5b6ca01e3e4e6a98b6e97142e06a63" data-app-id="caba356019"></script>
 
 	</body>
