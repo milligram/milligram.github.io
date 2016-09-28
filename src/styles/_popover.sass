@@ -7,30 +7,30 @@
 	border: .1rem solid #d1d1d1
 	border-radius: .4rem
 	display: none
-	filter: drop-shadow(0 0 .6rem rgba(0,0,0,.1))
-	transform: translateX(-50%)
+	filter: drop-shadow(0 0 .6rem rgba(0, 0, 0, .1))
 	left: 50%
 	min-width: 13.4rem
 	position: absolute
 	top: 94%
+	transform: translateX(-50%)
 
 	&.popover-open
 		display: block
 
 	.popover-item:first-child .popover-link:after,
 	.popover-item:first-child .popover-link:before
-		bottom: 100%
-		left: 50%
 		border: solid transparent
+		bottom: 100%
 		content: ' '
 		height: 0
-		width: 0
-		position: absolute
+		left: 50%
 		pointer-events: none
+		position: absolute
+		width: 0
 
 	.popover-item:first-child .popover-link:after
-		border-color: transparent
 		border-bottom-color: #fff
+		border-color: transparent
 		border-width: 1.0rem
 		margin-left: -1.0rem
 

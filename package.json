@@ -47,7 +47,7 @@
 		"svgo": "svgo -f src/images/icons && mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
 		"serve": "browser-sync start -s dist -f dist",
 		"build:templates": "cp -rf src/*.{html,json} dist",
-		"build:styles": "run-s sass cssnano",
+		"build:styles": "run-s sass-lint sass cssnano",
 		"build:scripts": "run-s eslint babel uglify",
 		"build:images": "run-s imagemin svgo",
 		"build:vendors": "cp -rf bower_components dist",
