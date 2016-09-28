@@ -1,0 +1,75 @@
+
+// Popover
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.popover
+	background: #fff
+	border: .1rem solid #d1d1d1
+	border-radius: .4rem
+	display: none
+	filter: drop-shadow(0 0 .6rem rgba(0,0,0,.1))
+	transform: translateX(-50%)
+	left: 50%
+	min-width: 13.4rem
+	position: absolute
+	top: 94%
+
+	&.popover-open
+		display: block
+
+	.popover-item:first-child .popover-link:after,
+	.popover-item:first-child .popover-link:before
+		bottom: 100%
+		left: 50%
+		border: solid transparent
+		content: ' '
+		height: 0
+		width: 0
+		position: absolute
+		pointer-events: none
+
+	.popover-item:first-child .popover-link:after
+		border-color: transparent
+		border-bottom-color: #fff
+		border-width: 1.0rem
+		margin-left: -1.0rem
+
+	.popover-item:first-child .popover-link:before
+		border-bottom-color: #d1d1d1
+		border-color: rgba(238, 238, 238, 0)
+		border-width: 1.1rem
+		margin-left: -1.1rem
+
+	.popover-list
+		list-style: none
+		margin: 0
+		padding: 0
+
+	.popover-item
+		margin: 0
+		padding: 0
+
+		&:first-child .popover-link
+			border-radius: .4rem .4rem 0 0
+
+			&:hover:after
+				border-bottom-color: #9b4dca
+
+		&:last-child .popover-link
+			border-bottom-width: 0
+			border-radius: 0 0 .4rem .4rem
+
+	.popover-link
+		border-bottom: .1rem solid #d1d1d1
+		color: #606c76
+		display: block
+		font-size: 1.2rem
+		padding: .8rem 2.0rem
+		position: relative
+		text-align: center
+		text-decoration: none
+
+		&:hover
+			background: #9b4dca
+			border-bottom-color: #9b4dca
+			color: #fff
