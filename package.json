@@ -40,6 +40,7 @@
 		"pretest": "npm install",
 		"prepush": "chmod +x ./.bin/prepush.sh && ./.bin/prepush.sh",
 		"plato": "plato -r -d test/complexity -l .eslintrc -t 'Code Complexity Tool' -x .json src/scripts/*.js",
+		"sitespeedio": "sitespeed.io -u https://milligram.github.io -r test/perf/.tmp --suppressDomainFolder --wptKey b277bb7109e15b600dafaf973f498dc1",
 		"clean": "rm -rf dist && mkdir dist",
 		"sass": "node-sass --output-style compressed -o node_modules/.cssnano-cache src/styles",
 		"cssnano": "mkdir -p dist/styles && cssnano node_modules/.cssnano-cache/* dist/styles/main.min.css && rm -rf node_modules/.cssnano-cache",
@@ -63,9 +64,9 @@
 		"watch:vendors": "onchange 'bower_components' -- npm run build:vendors",
 		"watch": "run-p watch:templates watch:styles watch:scripts watch:images watch:vendors serve",
 		"start": "run-s build watch",
-		"test:complexity": "npm run plato",
-		"test:perf": "sitespeed.io -u https://milligram.github.io -r test/perf --suppressDomainFolder --wptKey b277bb7109e15b600dafaf973f498dc1",
-		"test:build": "npm run build",
-		"test": "npm run test:build"
+		"test:complexity": "run-s plato",
+		"test:perf": "run-s sitespeedio",
+		"test:build": "run-s build",
+		"test": "run-s test:build"
 	}
 }
