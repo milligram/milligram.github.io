@@ -38,7 +38,7 @@
 		"prepush": "chmod +x ./.bin/prepush.sh && ./.bin/prepush.sh",
 		"clean": "rm -rf dist && mkdir dist",
 		"sass": "node-sass --output-style compressed -o node_modules/.cssnano-cache src/styles",
-		"cssnano": "mkdir -p dist/styles && cssnano node_modules/.cssnano-cache/* dist/styles/main.min.css",
+		"cssnano": "mkdir -p dist/styles && cssnano node_modules/.cssnano-cache/* dist/styles/main.min.css && rm -rf node_modules/.cssnano-cache",
 		"sass-lint": "sass-lint -c .sasslintrc src/styles/*.sass --verbose --no-exit",
 		"babel": "babel -p -d node_modules/.babel-cache src/scripts",
 		"uglify": "mkdir -p dist/scripts && uglifyjs node_modules/.babel-cache/*.js -m -c -o dist/scripts/main.min.js && rm -rf node_modules/.babel-cache",
