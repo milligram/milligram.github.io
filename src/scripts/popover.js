@@ -35,7 +35,7 @@
 	}
 
 	// Change url in `localhost`
-	if (!window.location.hostname === 'localhost') return;
+	if (window.location.hostname !== 'localhost') return;
 	for (i = 0; i < $anchors.length; i++) {
 		if ( $anchors[i].href.match(/milligram.github.io/g) ) $anchors[i].href = $anchors[i].href.replace('https://milligram.github.io/', '');
 	}

@@ -6,9 +6,7 @@
 
 	'use strict';
 
-	var isLocalhost = window.location.hostname === 'localhost';
-
-	if (isLocalhost) return;
+	if (window.location.hostname === 'localhost') return;
 
 	(function(i, s, o, g, r, a, m) {
 		i['GoogleAnalyticsObject'] = r;
