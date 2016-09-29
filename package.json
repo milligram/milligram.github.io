@@ -35,6 +35,7 @@
 	"scripts": {
 		"postinstall": "bower install",
 		"prestart": "npm install",
+		"pretest": "npm install",
 		"prepush": "chmod +x ./.bin/prepush.sh && ./.bin/prepush.sh",
 		"clean": "rm -rf dist && mkdir dist",
 		"sass": "node-sass --output-style compressed -o node_modules/.cssnano-cache src/styles",
@@ -58,6 +59,7 @@
 		"watch:images": "onchange 'src/images' -- npm run build:images",
 		"watch:vendors": "onchange 'bower_components' -- npm run build:vendors",
 		"watch": "run-p watch:templates watch:styles watch:scripts watch:images watch:vendors serve",
-		"start": "run-s build watch"
+		"start": "run-s build watch",
+		"test": "npm run build"
 	}
 }
