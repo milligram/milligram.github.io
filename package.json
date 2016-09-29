@@ -29,6 +29,7 @@
 		"onchange": "^2.4.0",
 		"plato": "^1.7.0",
 		"sass-lint": "^1.8.2",
+		"sitespeed.io": "^3.11.8",
 		"svg-sprite-generator": "^0.0.7",
 		"svgo": "^0.6.6",
 		"uglify-js": "^2.6.2"
@@ -63,6 +64,7 @@
 		"watch": "run-p watch:templates watch:styles watch:scripts watch:images watch:vendors serve",
 		"start": "run-s build watch",
 		"test:complexity": "npm run plato",
+		"test:perf": "sitespeed.io -u https://milligram.github.io -r test/perf --suppressDomainFolder --wptKey b277bb7109e15b600dafaf973f498dc1",
 		"test:build": "npm run build",
 		"test": "npm run test:build"
 	}
