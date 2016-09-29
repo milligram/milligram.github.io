@@ -7,8 +7,8 @@ npm run build
 
 # Statement
 BRANCH="master"
-REPO=`git config remote.origin.url`
-SHA=`git rev-parse --verify HEAD`
+REPO=$(git config remote.origin.url)
+SHA=$(git rev-parse --verify HEAD)
 
 # Prepare
 git clone -b $BRANCH --single-branch $REPO $BRANCH
@@ -17,7 +17,7 @@ rm -rf *
 cp -rf ../dist/* ./
 
 # Diff
-if [ -z `git diff --exit-code` ]; then
+if [ -z $(git diff --exit-code) ]; then
 	cd ..
 	rm -rf $BRANCH
 	echo "No changes on this push, exiting."
