@@ -4,6 +4,7 @@
 		"font-awesome": "latest",
 		"milligram": "latest",
 		"normalize.css": "~3.0.0",
-		"code-prettify": "latest"
+		"code-prettify": "latest",
+		"opbeat-js": "latest"
 	}
 }
