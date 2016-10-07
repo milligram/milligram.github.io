@@ -17,28 +17,27 @@
 	&.popover-open
 		display: block
 
-	.popover-item:first-child .popover-link:after,
-	.popover-item:first-child .popover-link:before
+	&:after,
+	&:before
 		border: solid transparent
-		bottom: 100%
+		border-color: transparent
+		border-width: 1.0rem
 		content: ' '
 		height: 0
 		left: 50%
 		pointer-events: none
 		position: absolute
+		right: 1.7rem
+		top: 0
 		width: 0
 
-	.popover-item:first-child .popover-link:after
+	&:after
 		border-bottom-color: #fff
-		border-color: transparent
-		border-width: 1.0rem
-		margin-left: -1.0rem
+		transform: translate(-50%, -100%)
 
-	.popover-item:first-child .popover-link:before
+	&:before
 		border-bottom-color: #d1d1d1
-		border-color: rgba(238, 238, 238, 0)
-		border-width: 1.1rem
-		margin-left: -1.1rem
+		transform: translate(-50%, -102%)
 
 	.popover-list
 		list-style: none
@@ -51,9 +50,6 @@
 
 		&:first-child .popover-link
 			border-radius: .4rem .4rem 0 0
-
-			&:hover:after
-				border-bottom-color: #9b4dca
 
 		&:last-child .popover-link
 			border-bottom-width: 0
