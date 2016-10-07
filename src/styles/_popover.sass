@@ -3,8 +3,8 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .popover
-	background: #fff
-	border: .1rem solid #d1d1d1
+	background: $color-initial
+	border: .1rem solid $color-quaternary
 	border-radius: .4rem
 	display: none
 	filter: drop-shadow(0 0 .6rem rgba(0, 0, 0, .1))
@@ -32,11 +32,11 @@
 		width: 0
 
 	&:after
-		border-bottom-color: #fff
+		border-bottom-color: $color-initial
 		transform: translate(-50%, -100%)
 
 	&:before
-		border-bottom-color: #d1d1d1
+		border-bottom-color: $color-quaternary
 		transform: translate(-50%, -102%)
 
 	.popover-list
@@ -56,8 +56,8 @@
 			border-radius: 0 0 .4rem .4rem
 
 	.popover-link
-		border-bottom: .1rem solid #d1d1d1
-		color: #606c76
+		border-bottom: .1rem solid $color-quaternary
+		color: $color-secondary
 		display: block
 		font-size: 1.2rem
 		padding: .8rem 2.0rem
@@ -66,6 +66,6 @@
 		text-decoration: none
 
 		&:hover
-			background: #9b4dca
-			border-bottom-color: #9b4dca
-			color: #fff
+			background: $color-primary
+			border-bottom-color: $color-primary
+			color: $color-initial
