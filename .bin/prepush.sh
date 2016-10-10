@@ -1,10 +1,6 @@
 #!/bin/bash
 # set -e # Exit with nonzero exit code if anything fails
 
-# Compile
-npm install
-npm run build
-
 # Statement
 BRANCH="master"
 REPO=$(git config remote.origin.url)
