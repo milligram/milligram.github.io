@@ -45,7 +45,7 @@
 		"prestart": "npm install",
 		"pretest": "npm install",
 		"prepush": "npm install && run-s build && chmod +x .bin/prepush.sh && .bin/prepush.sh",
-		"plato": "plato -r -d test/complexity -l .eslintrc -t 'Code Complexity Tool' -x .json src/scripts/*.js && opn test/complexity/index.html",
+		"plato": "plato -r -d test/complexity -e .eslintrc -t 'Code Complexity Tool' -x .json src/scripts/*.js && opn test/complexity/index.html",
 		"sitespeedio": "sitespeed.io -u https://milligram.github.io -r test/perf --suppressDomainFolder --wptKey b277bb7109e15b600dafaf973f498dc1",
 		"reference": "gulp --gulpfile node_modules/backstopjs/gulpfile.js reference --configPath=../../backstop.conf.js",
 		"compare": "run-s build && gulp --gulpfile node_modules/backstopjs/gulpfile.js test --configPath=../../backstop.conf.js",
