@@ -3,3 +3,5 @@ bower_components
 dist
 node_modules
 test
+.tmp
+*.DS_Store
