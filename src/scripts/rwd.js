@@ -6,7 +6,7 @@
 
 // 	'use strict';
 
-// 	if (window.location.hostname === 'localhost') return;
+// 	if (window.location.port === '3000') return;
 
 // 	var object = {
 // 		apiKey: 'AIzaSyAT5nFMDrKbyNl6HMk3utp55ajhjh7r7II',

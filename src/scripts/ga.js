@@ -6,9 +6,11 @@
 
 	'use strict';
 
-	if (window.location.hostname === 'localhost') return;
+	if (window.location.port === '3000') return;
 
-	(function(i, s, o, g, r, a, m) {
+	const appId = 'UA-24389952-15';
+
+	((i, s, o, g, r, a, m) => {
 		i['GoogleAnalyticsObject'] = r;
 		i[r] = i[r] || function() {
 			(i[r].q = i[r].q || []).push(arguments);
@@ -21,7 +23,7 @@
 		m.parentNode.insertBefore(a, m);
 	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	ga('create', 'UA-24389952-15', 'auto');
+	ga('create', appId, 'auto');
 	ga('send', 'pageview');
 
 })();

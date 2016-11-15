@@ -18,4 +18,12 @@
 		});
 	}
 
+	((l, o, a, d, e, r) => {
+		e = o.createElement(a);
+		e.async = 1;
+		e.src = d;
+		r = o.getElementsByTagName(a)[document.querySelectorAll(a).length - 1];
+		r.parentNode.insertBefore(e, r);
+	})(window, document, 'script', 'bower_components/code-prettify/src/run_prettify.js');
+
 })();
