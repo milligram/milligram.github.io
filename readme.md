@@ -1,4 +1,4 @@
-<a align="center" href="http://milligram.github.io"><img width="100%" src="https://milligram.github.io/images/thumbnail.jpg" alt="Milligram - A minimalist CSS framework"></a>
+<a align="center" href="http://milligram.github.io"><img width="100%" src="https://milligram.github.io/images/thumbnail.png" alt="Milligram - A minimalist CSS framework"></a>
 
 > A minimalist CSS framework.
 
