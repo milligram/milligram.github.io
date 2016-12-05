@@ -1,6 +1,10 @@
 extends layout.pug
-block content
 
+block title
+
+			title Milligram | A minimalist CSS framework.
+
+block content
 
 	header.header#home
 		section.container
@@ -8,9 +12,7 @@ block content
 			h1.title Milligram
 			p.description A minimalist CSS framework
 			a.button(href='#getting-started' title='Getting Started') Getting Started
-			div.carbonads.carbonads-home
-				script#_carbonads_js(src='https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio' async defer)
-
+			div.carbonads.carbonads-home <script id='_carbonads_js' src='https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio' async defer></script>
 
 	section.container#why
 		h5.title Why it's awesome?
@@ -59,7 +61,6 @@ block content
 								path(d='M256,1c2.667,0,5.333,0,8,0c2,0.812,4,0.812,6,0c2,0,4,0,6,0c1,0.748,2,0.748,3,0c0.667,0,1.333,0,2,0c10.692,1.216,21.453,1.516,32.063,3.808c44.622,9.639,83.973,29.397,118.129,59.784c29.6,26.333,51.218,58.118,65.906,94.687c7.158,17.821,12.273,36.296,14.614,55.439c0.661,5.406,0.307,10.898,1.287,16.283c0,2.667,0,5.333,0,8c-0.812,2-0.812,4,0,6c0,3.667,0,7.333,0,11c-0.812,2-0.812,4,0,6c0,3,0,6,0,9c-1.422,9.497-1.509,19.118-3.467,28.599c-8.318,40.268-25.18,76.457-51.225,108.254c-31.297,38.209-70.427,65.258-117.344,80.745c-20.15,6.652-40.874,10.522-62.141,11.976c-45.284,3.096-88.198-5.62-128.853-25.303c-7.19-3.481-13.082-4.11-20.637-1.633c-24.533,8.043-49.178,15.762-73.802,23.534c-14.615,4.613-29.188,9.362-43.837,13.866C8.265,512.091,4.704,513.266,1,512c0-0.333,0-0.667,0-1c11.836-40.078,26.325-79.272,39.622-118.864c0.212-0.631,0.367-1.295,0.665-1.883c3.648-7.208,2.295-13.418-1.683-20.535c-16.111-28.822-25.667-59.844-29.153-92.751c-5.002-47.219,2.803-92.203,23.336-134.939c11.328-23.577,26.207-44.695,44.272-63.72c32.369-34.089,71.307-56.984,116.361-69.718c14.601-4.127,29.467-6.954,44.73-7.078C239.818,1.507,240.474,1.5,241,1c3,0,6,0,9,0C252,1.812,254,1.812,256,1z')
 								path(d='M64.255,451.143c4.926-14.547,9.591-28.294,14.237-42.048c3.548-10.504,6.887-21.083,10.714-31.484c1.205-3.275,0.686-5.521-1.191-8.186c-14.663-20.823-25.326-43.563-31.24-68.331c-13.074-54.756-6.209-106.79,22.261-155.644c19.654-33.726,46.867-59.813,80.93-78.644c25.254-13.961,52.334-22.303,81.171-24.971c42.343-3.917,82.409,3.727,119.897,23.714c32.469,17.31,58.736,41.577,78.784,72.536c16.11,24.877,26.553,51.949,30.787,81.208c6.891,47.613-1.319,92.548-25.333,134.431c-16.169,28.2-37.746,51.48-64.571,69.689c-25.271,17.154-52.997,28.701-83.28,33.576c-53.151,8.556-102.716-1.162-148.516-29.573c-2.48-1.538-4.622-1.699-7.43-0.795C116.112,434.786,90.692,442.775,64.255,451.143z')
 								path(d='M389.224,314.597c-0.499,29.044-17.91,43.708-45.126,51.36c-12.34,3.47-24.32,1.874-36.248-1.895c-22.27-7.036-44.505-14.173-64.575-26.532c-30.13-18.554-53.808-43.758-74.301-72.25c-10.292-14.309-19.953-28.894-25.721-45.793c-9.621-28.188-1.794-59.479,19.622-77.308c4.706-3.917,9.96-5.786,16.059-5.457c3.16,0.171,6.368,0.553,9.484,0.207c6.685-0.741,10.818,2.338,13.282,8.145c6.983,16.458,13.969,32.916,20.788,49.442c2.322,5.628-0.696,10.374-3.523,14.885c-3.639,5.807-8.416,10.749-13.032,15.756c-3.622,3.929-3.973,7.829-1.335,12.186c16.707,27.598,38.381,50.033,67.52,64.632c5.326,2.668,10.763,5.13,16.233,7.49c6.926,2.988,9.569,2.354,14.333-3.366c5.751-6.904,11.443-13.861,17.052-20.881c5.157-6.455,7.479-7.395,14.899-4.253c16.93,7.171,33.358,15.427,49.856,23.529C389.627,307.02,389.436,311.425,389.224,314.597z')
-
 
 	section.container#getting-started
 		h5.title Getting Started
@@ -117,58 +118,57 @@ block content
 				a(href='getting-started.html' title='Examples about getting started')  here
 				| .
 
-
 	section.container#typography
 		h5.title Typography
-		p.description CSS3 introduces a few new units, including the
+		p.description CSS3 introduces a few new units, including the&nbsp;
 			code rem
-			|  unit, which stands for
+			|  unit, which stands for&nbsp;
 			em "root em"
-			| . The
+			| . The&nbsp;
 			code rem
-			|  unit is relative to the font-size of the root element
-			code <html>
-			| . That means that we can define a single font size on the root element, and define all
+			|  unit is relative to the font-size of the root element&nbsp;
+			code  html&nbsp;
+			| . That means that we can define a single font size on the root element, and define all&nbsp;
 			code rem
-			|  units to be a percentage of that. The typography has
+			|  units to be a percentage of that. The typography has&nbsp;
 			code font-size
-			|  defined in 1.6rem (16px) and
+			|  defined in 1.6rem (16px) and&nbsp;
 			code line-height
-			|  in 1.6 (24px).
+			|  in 1.6 (24px).&nbsp;
 			strong Milligram
-			|  uses the
+			|  uses the&nbsp;
 			code font-family
-			a(href='https://www.google.com/fonts/specimen/Roboto' title='Roboto by Christian Robertson' target='_blank') Roboto
+			a(href='https://www.google.com/fonts/specimen/Roboto' title='Roboto by Christian Robertson' target='_blank')  Roboto
 			| , created by
-			u Christian Robertson
+			u  Christian Robertson
 			| , and provided by Google.
 		div.example
 			div.row
 				div.column
 					h1 Heading
-						span.heading-font-size
+						span.heading-font-size &nbsp;
 							code h1
-							| 5.0rem (50px)
+							|  5.0rem (50px)
 					h2 Heading
-						span.heading-font-size
+						span.heading-font-size &nbsp;
 							code h2
-							| 4.2rem (42px)
+							|  4.2rem (42px)
 					h3 Heading
-						span.heading-font-size
+						span.heading-font-size &nbsp;
 							code h3
-							| 3.6rem (36px)
+							|  3.6rem (36px)
 					h4 Heading
-						span.heading-font-size
+						span.heading-font-size &nbsp;
 							code h4
-							| 3.0rem (30px)
+							|  3.0rem (30px)
 					h5 Heading
-						span.heading-font-size
+						span.heading-font-size &nbsp;
 							code h5
-							| 2.4rem (24px)
+							|  2.4rem (24px)
 					h6 Heading
-						span.heading-font-size
+						span.heading-font-size &nbsp;
 							code h6
-							| 1.5rem (15px)
+							|  1.5rem (15px)
 			pre.code.prettyprint
 				code.code-content
 					| <!-- Base font-size and line-height -->
@@ -196,7 +196,6 @@ block content
 				a(href='typography.html' title='Examples about typography')  here
 				| .
 
-
 	section.container#blockquotes
 		h5.title Blockquotes
 		p.description The Blockquote represents a section that is quoted from another source.
@@ -209,41 +208,53 @@ block content
 				| <blockquote>
 				|   <p><em>Yeah!! Milligram is amazing.</em></p>
 				| </blockquote>
-			p
-				| See more examples of
-				strong  blockquotes
-				a(href='blockquotes.html' title='Examples about blockquotes')  here
-				| .
-
+		p
+			| See more examples of
+			strong  blockquotes
+			a(href='blockquotes.html' title='Examples about blockquotes')  here
+			| .
 
 	section.container#buttons
 		h5.title Buttons
-		p.description The Button, an essential part of any user experience. Buttons come in three basic styles in Milligram: The
-			code <button>
-			|  element has flat color by default, whereas
+		p.description The Button, an essential part of any user experience. Buttons come in three basic styles in Milligram: The&nbsp;
+			code button
+			|  element has flat color by default, whereas&nbsp;
 			code .button-outline
-			|  has a simple outline around, and
+			|  has a simple outline around, and&nbsp;
 			code .button-clear
 			|  is entirely clear.
 		div.example
 			a.button(href='javascript: void(0)') Default Button
+			| &nbsp;
 			button.button.button-outline Outlined Button
+			| &nbsp;
 			input.button.button-clear(type='submit' value='Clear Button')
-			p
-				| See more examples of
-				strong  buttons
-				a(href='buttons.html' title='Examples about buttons')  here
+		pre.code.prettyprint
+			code.code-content
+				| <!-- Default Button -->
+				| <a class="button" href="#">Default Button</a>
 				| .
-
+				| <!-- Outlined Button -->
+				| <button class="button button-outline">Outlined Button</button>
+				| .
+				| <!-- Clear Button -->
+				| <input class="button button-clear" type="submit" value="Clear Button">
+				| .
+				| <!-- Easily apply the .button class for button style in the anchor element. -->
+		p
+			| See more examples of
+			strong  buttons
+			a(href='buttons.html' title='Examples about buttons')  here
+			| .
 
 	section.container#lists
 		h5.title Lists
-		p.description The List is a very versatile and common way to display items. Milligram has three types of lists: The unordered list use
-			code <ul>
-			|  element will be marked with a outline circles, the ordered list use
-			code <ol>
-			|  element and your items will be marked with numbers, the description list use
-			code <dl>
+		p.description The List is a very versatile and common way to display items. Milligram has three types of lists: The unordered list use&nbsp;
+			code ul
+			|  element will be marked with a outline circles, the ordered list use&nbsp;
+			code ol
+			|  element and your items will be marked with numbers, the description list use&nbsp;
+			code dl
 			|  element and your items will not be marking, only spacings.
 		div.row.example
 			div.column
@@ -258,12 +269,32 @@ block content
 				dl
 					dt Description list item 1
 					dd Description list item 1.1
-			p
-				| See more examples of
-				strong  lists
-				a(href='lists.html' title='Examples about lists')  here
+		pre.code.prettyprint
+			code.code-content
+				| <!-- Unordered list -->
+				| <ul>
+				|   <li>Unordered list item 1</li>
+				|   <li>Unordered list item 2</li>
+				| </ul>
 				| .
-
+				| <!-- Ordered list -->
+				| <ol>
+				|   <li>Ordered list item 1</li>
+				|   <li>Ordered list item 2</li>
+				| </ol>
+				| .
+				| <!-- Description list -->
+				| <dl>
+				|   <dt>Description list item 1</dt>
+				|   <dd>Description list item 1.1</dd>
+				| </dl>
+				| .
+				| <!-- Easily change any <dl>, <ul> or an <ol> to get clear lists, number lists or outline circles. -->
+		p
+			| See more examples of
+			strong  lists
+			a(href='lists.html' title='Examples about lists')  here
+			| .
 
 	section.container#forms
 		h5.title Forms
@@ -277,23 +308,40 @@ block content
 					textarea#commentField(placeholder='Hi CJ …')
 					div.float-right
 						input#confirmField(type='checkbox')
+						| &nbsp;
 						label.label-inline(for='confirmField') Send a copy to yourself
 					input.button-primary(type='submit' value='Send')
-			p
-				| See more examples of
-				strong  forms
-				a(href='forms.html' title='Examples about forms')  here
+		pre.code.prettyprint
+			code.code-content
+				| <form>
+				|   <fieldset>
+				|     <label for="nameField">Name</label>
+				|     <input type="text" placeholder="CJ Patoilo" id="nameField">
+				|     <label for="commentField">Comment</label>
+				|     <textarea placeholder="Hi CJ …" id="commentField"></textarea>
+				|     <div class="float-right">
+				|       <input type="checkbox" id="confirmField">
+				|       <label class="label-inline" for="confirmField">Send a copy to yourself</label>
+				|     </div>
+				|     <input class="button-primary" type="submit" value="Send">
+				|   </fieldset>
+				| </form>
 				| .
-
+				| <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it -->
+		p
+			| See more examples of
+			strong  forms
+			a(href='forms.html' title='Examples about forms')  here
+			| .
 
 	section.container#tables
 		h5.title Tables
-		p.description The Table element represents data in two dimensions or more. We encourage the use of proper formatting with
-			code <thead>
-			|  and
-			code <tbody>
-			|  to create a
-			code <table>
+		p.description The Table element represents data in two dimensions or more. We encourage the use of proper formatting with&nbsp;
+			code thead
+			|  and&nbsp;
+			code tbody
+			|  to create a&nbsp;
+			code table
 			| . The code becomes cleaner without disturbing understanding.
 		div.example
 			table
@@ -314,19 +362,47 @@ block content
 						td 25
 						td 2,01
 						td Los Angeles, CA
-			p
-				| See more examples of
-				strong  tables
-				a(href='tables.html' title='Examples about tables')  here
+		pre.code.prettyprint
+			code.code-content
+				| <table>
+				|   <thead>
+				|     <tr>
+				|       <th>Name</th>
+				|       <th>Age</th>
+				|       <th>Height</th>
+				|       <th>Location</th>
+				|     </tr>
+				|   </thead>
+				|   <tbody>
+				|     <tr>
+				|       <td>Stephen Curry</td>
+				|       <td>27</td>
+				|       <td>1,91</td>
+				|       <td>Akron, OH</td>
+				|     </tr>
+				|     <tr>
+				|       <td>Klay Thompson</td>
+				|       <td>25</td>
+				|       <td>2,01</td>
+				|       <td>Los Angeles, CA</td>
+				|     </tr>
+				|   </tbody>
+				| </table>
 				| .
-
+				| <!-- Prior to the creation of CSS, HTML <table> elements were often used as a method for page layout. This usage has been discouraged since HTML4, and the <table> element should not be used for layout purposes. -->
+		p
+			| See more examples of
+			strong  tables
+			a(href='tables.html' title='Examples about tables')  here
+			| .
 
 	section.container#grids
 		h5.title Grids
-		p.description The Grid is a fluid system with a max width of
+		p.description The Grid is a fluid system with a max width of&nbsp;
 			code 112.0rem
+			| &nbsp;
 			small (1120px)
-			| , that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Milligram is different than most because of its use of the
+			| , that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Milligram is different than most because of its use of the&nbsp;
 			strong CSS Flexible Box Layout Module standard
 			| . The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add columns you want in a row, and they'll evenly take up the available space. If you want three columns, add three columns, if you want five columns, add five columns. There is no restriction on number of columns, but we advise you to follow a design pattern of grid system. See more tips on best practices in the
 			a(href='#tips' title='Tips')  tips
@@ -347,34 +423,80 @@ block content
 						span.column-demo .column
 					div.column.column-50.column-offset-25
 						span.column-demo .column-50.column-offset-25
-			p
-				| See more examples of
-				strong  grids
-				a(href='grids.html' title='Examples about grids')  here
+		pre.code.prettyprint
+			code.code-content
+				| <!-- .container is main centered wrapper -->
+				| <div class="container">
 				| .
-
+				|   <div class="row">
+				|     <div class="column">.column</div>
+				|     <div class="column">.column</div>
+				|     <div class="column">.column</div>
+				|     <div class="column">.column</div>
+				|   </div>
+				| .
+				|   <div class="row">
+				|     <div class="column">.column</div>
+				|     <div class="column column-50 column-offset-25">.column column-50 column-offset-25</div>
+				|   </div>
+				| .
+				| </div>
+				| .
+				| <!-- Every .column added inside a .row will automatically receive an equal amount of the available area. -->
+		p
+			| See more examples of
+			strong  grids
+			a(href='grids.html' title='Examples about grids')  here
+			| .
 
 	section.container#codes
 		h5.title Codes
-		p.description The Code element represents a fragment of computer code. Just wrap anything in a <code>< code></code> and it will appear like this. if you need a block, by default, enter the <code>< code></code> within the <code>< pre></code> element.
+		p.description The Code element represents a fragment of computer code. Just wrap anything in a&nbsp;
+			code code
+			|  and it will appear like this. if you need a block, by default, enter the&nbsp;
+			code code
+			|  within the&nbsp;
+			code pre
+			| element.
 		div.example
-			p
-				| See more examples of
-				strong  codes
-				a(href='codes.html' title='Examples about codes')  here
-				| .
-
+			pre
+				code
+					| .milligram {
+					|   color: #9b4dca;
+					| }
+		pre.code.prettyprint
+			code.code-content
+				| <pre><code>
+				| .milligram {
+				|   color: #9b4dca;
+				| }
+				| </code></pre>
+		p
+			| See more examples of
+			strong  codes
+			a(href='codes.html' title='Examples about codes')  here
+			| .
 
 	section.container#utilities
 		h5.title Utilities
 		p.description Milligram has some functional classes to improve the performance and productivity everyday.
-		div.example
-			p
-				| See more examples of
-				strong  utilities
-				a(href='utilities.html' title='Examples about utilities')  here
+		pre.code.prettyprint
+			code.code-content
+				| <!-- Functional Classes -->
 				| .
-
+				| <!-- Clear any float  -->
+				| <div class="clearfix">
+				| .
+				|   <!-- Float either directions -->
+				|   <div class="float-left"></div>
+				|   <div class="float-right"></div>
+				| .
+				| </div>
+		p
+			| See more examples of
+			strong  utilities
+			a(href='utilities.html' title='Examples about utilities')  here
+			| .
 
 	section.container#tips
 		h5.title Tips
@@ -386,23 +508,38 @@ block content
 		div.example
 			div.row
 				ul
-					li Larger than
+					li Larger than&nbsp;
 						strong Mobile
-						|  screen: 40.0rem
+						|  screen: 40.0rem&nbsp;
 						span.heading-font-size (640px)
-					li Larger than
+					li Larger than&nbsp;
 						strong Tablet
-						|  screen: 80.0rem
+						|  screen: 80.0rem&nbsp;
 						span.heading-font-size (1280px)
-					li Larger than
+					li Larger than&nbsp;
 						strong Desktop
-						|  screen: 120.0rem
+						|  screen: 120.0rem&nbsp;
 						span.heading-font-size (1920px)
-			p
-				| See more examples of
-				strong  tips
-				a(href='tips.html' title='Examples about tips')  here
+		pre.code.prettyprint
+			code.code-content
+				| /* Mobile First Media Queries */
 				| .
+				| /* Base style */
+				| { ... }
+				| .
+				| /* Larger than mobile screen */
+				| @media (min-width: 40.0rem) { ... }
+				| .
+				| /* Larger than tablet screen */
+				| @media (min-width: 80.0rem) { ... }
+				| .
+				| /* Larger than desktop screen */
+				| @media (min-width: 120.0rem) { ... }
+		p
+			| See more examples of
+			strong  tips
+			a(href='tips.html' title='Examples about tips')  here
+			| .
 		p
 			strong Extending The Inheritances
 		p
@@ -425,13 +562,41 @@ block content
 					a.button.button-large(href='javascript: void(0)') .button-large
 					a.button.button-large.button-outline(href='javascript: void(0)') .button-large
 					a.button.button-large.button-clear(href='javascript: void(0)') .button-large
-			p
-				| See more examples of
-				strong  tips
-				a(href='tips.html' title='Examples about tips')  here
+		pre.code.prettyprint
+			code.code-content
+				| /* Extending The Inheritances */
 				| .
-
-
+				| /* Applying color variation */
+				| .button-black {
+				|   background-color: black;
+				|   border-color: black;
+				| }
+				| .button-black.button-outline {
+				|   color: black;
+				| }
+				| .button-black.button-clear {
+				|   color: black;
+				| }
+				| .
+				| /* Applying size variation */
+				| .button-small {
+				|   font-size: .8rem;
+				|   height: 2.8rem;
+				|   line-height: 2.8rem;
+				|   padding: 0 1.5rem;
+				| }
+				| .
+				| .button-large {
+				|   font-size: 1.4rem;
+				|   height: 4.5rem;
+				|   line-height: 4.5rem;
+				|   padding: 0 2rem;
+				| }
+		p
+			| See more examples of
+			strong  tips
+			a(href='tips.html' title='Examples about tips')  here
+			| .
 
 	section.container#browser-support
 		h5.title Browser Support
@@ -439,19 +604,19 @@ block content
 		div.example
 			ul
 				li Chrome
-					small latest
+					small  latest
 				li Edge
-					small latest
+					small  latest
 				li Firefox
-					small latest
+					small  latest
 				li IE
-					small latest
+					small  latest
 				li Opera
-					small latest
+					small  latest
 				li Safari
-					small latest
-			p
-				| See more examples of
-				strong  browser support
-				a(href='browser-support.html' title='Examples about browser support')  here
-				| .
+					small  latest
+		p
+			| See more examples of
+			strong  browser support
+			a(href='browser-support.html' title='Examples about browser support')  here
+			| .
