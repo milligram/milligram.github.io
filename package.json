@@ -74,7 +74,7 @@
 		"build:vendors": "cp -rf bower_components dist",
 		"build": "run-s clean build:misc build:fonts build:templates build:styles build:scripts build:images build:vendors",
 		"watch:fonts": "onchange 'src/fonts' -- npm run build:fonts",
-		"watch:templates": "onchange 'src/*.pug' -- npm run build:templates",
+		"watch:templates": "onchange 'src/**/*.pug' -- npm run build:templates",
 		"watch:styles": "onchange 'src/styles' -- npm run build:styles",
 		"watch:scripts": "onchange 'src/scripts' -- npm run build:scripts",
 		"watch:images": "onchange 'src/images' -- npm run build:images",
