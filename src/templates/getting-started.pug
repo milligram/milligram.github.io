@@ -1,0 +1,61 @@
+section.container#getting-started
+	h5.title
+		| Getting Started
+	p.description
+		| There are some ways to get started. First, see all download options available below, then choose the most suitable option for your need. Now you should add the main file of the Milligram and the CSS Reset in the header of your project. Just that!
+	p
+		a.button.download(href='https://github.com/milligram/milligram/archive/master.zip' title='Download Milligram') Download Milligram
+	div.example
+		p
+			strong Install with Bower
+		p
+			| Milligram is available to install using Bower.
+		pre.code.prettyprint
+			code.code-content
+				| $ bower install milligram
+		p
+			strong Install with npm
+		p
+			| Milligram is also available to install using npm.
+		pre.code.prettyprint
+			code.code-content
+				| $ npm install milligram
+		p
+			strong What's included
+		p
+			| Once downloaded, extract the compressed folder to see the main file in the uncompressed and minified version.
+		pre.code.prettyprint.lang-md
+			code.code-content
+				| milligram/
+				| ├── demo/
+				| │   └── index.html
+				| ├── dist/
+				| │   ├── milligram.css
+				| │   └── milligram.min.css
+				| ├── license
+				| └── readme.md
+		p
+			strong Usage
+		p
+			| First, use any method mentioned above to download Milligram. Then, just add these tags in the head. Milligram is also available via
+			a(href='https://cdnjs.com/libraries/milligram' title='Milligram is also available via CDN' target='_blank')  CDN
+			| .
+		pre.code.prettyprint
+			code.code-content
+				| <!-- Google Fonts -->
+				| <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+				= '\n\n'
+				| <!-- CSS Reset -->
+				| <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+				= '\n\n'
+				| <!-- Milligram CSS minified -->
+				| <link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
+				= '\n\n'
+				| <!-- You should properly set the path from the main file. -->
+		p
+			| See more examples of
+			= ' '
+			strong getting started
+			= ' '
+			a(href='getting-started.html' title='Examples about getting started') here
+			| .
