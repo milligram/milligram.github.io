@@ -1,0 +1,18 @@
+<section class="container" id="grids"><div class="carbonads"><script id='_carbonads_js' src='https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio' async defer></script></div><h5 class="title">Grids</h5><p class="description">The Grid is a fluid system with a max width of <code>112.0rem</code> <small>(1120px)</small>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Milligram is different than most because of its use of the <strong>CSS Flexible Box Layout Module standard</strong>. The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add columns you want in a row, and they'll evenly take up the available space. If you want three columns, add three columns, if you want five columns, add five columns. There is no restriction on number of columns, but we advise you to follow a design pattern of grid system. See more tips on best practices in the<a href="#tips" title="Tips"> tips</a>.</p><div class="example"><div class="container"><div class="row"><div class="column"><span class="column-demo">.column</span></div><div class="column"><span class="column-demo">.column</span></div><div class="column"><span class="column-demo">.column</span></div><div class="column"><span class="column-demo">.column</span></div></div><div class="row"><div class="column"><span class="column-demo">.column</span></div><div class="column column-50 column-offset-25"><span class="column-demo">.column-50.column-offset-25</span></div></div></div></div><pre class="code prettyprint"><code class="code-content"><!-- .container is main centered wrapper -->
+<div class="container">
+
+  <div class="row">
+    <div class="column">.column</div>
+    <div class="column">.column</div>
+    <div class="column">.column</div>
+    <div class="column">.column</div>
+  </div>
+
+  <div class="row">
+    <div class="column">.column</div>
+    <div class="column column-50 column-offset-25">.column column-50 column-offset-25</div>
+  </div>
+
+</div>
+
+<!-- Every .column added inside a .row will automatically receive an equal amount of the available area. --></code></pre></section>
