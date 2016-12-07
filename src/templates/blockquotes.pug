@@ -1,4 +1,6 @@
 section.container#blockquotes
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Blockquotes
 	p.description
@@ -12,10 +14,11 @@ section.container#blockquotes
 			| <blockquote>
 			|   <p><em>Yeah!! Milligram is amazing.</em></p>
 			| </blockquote>
-	p
-		| See more examples of
-		= ' '
-		strong blockquotes
-		= ' '
-		a(href='blockquotes.html' title='Examples about blockquotes') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong blockquotes
+			= ' '
+			a(href='blockquotes.html' title='Examples about blockquotes') here
+			| .

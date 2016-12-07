@@ -1,4 +1,6 @@
 section.container#typography
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Typography
 	p.description
@@ -101,10 +103,11 @@ section.container#typography
 			| <h6>Heading</h6>
 			= '\n\n'
 			| <!-- The base font-size is set at 62.5% for having the convenience of sizing rems in a way that is similar to using px. So basically 1.6rem = 16px. -->
-	p
-		| See more examples of
-		= ' '
-		strong typography
-		= ' '
-		a(href='typography.html' title='Examples about typography') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong typography
+			= ' '
+			a(href='typography.html' title='Examples about typography') here
+			| .

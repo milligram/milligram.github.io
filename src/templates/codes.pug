@@ -1,4 +1,6 @@
 section.container#codes
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Codes
 	p.description
@@ -27,10 +29,11 @@ section.container#codes
 			|   color: #9b4dca;
 			| }
 			| </code></pre>
-	p
-		| See more examples of
-		= ' '
-		strong codes
-		= ' '
-		a(href='codes.html' title='Examples about codes') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong codes
+			= ' '
+			a(href='codes.html' title='Examples about codes') here
+			| .

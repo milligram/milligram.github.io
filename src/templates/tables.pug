@@ -1,4 +1,6 @@
 section.container#tables
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Tables
 	p.description
@@ -59,10 +61,11 @@ section.container#tables
 			| </table>
 			= '\n\n'
 			| <!-- Prior to the creation of CSS, HTML <table> elements were often used as a method for page layout. This usage has been discouraged since HTML4, and the <table> element should not be used for layout purposes. -->
-	p
-		| See more examples of
-		= ' '
-		strong tables
-		= ' '
-		a(href='tables.html' title='Examples about tables') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong tables
+			= ' '
+			a(href='tables.html' title='Examples about tables') here
+			| .

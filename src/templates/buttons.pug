@@ -1,4 +1,6 @@
 section.container#buttons
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Buttons
 	p.description
@@ -33,10 +35,11 @@ section.container#buttons
 			| <input class="button button-clear" type="submit" value="Clear Button">
 			= '\n\n'
 			| <!-- Easily apply the .button class for button style in the anchor element. -->
-	p
-		| See more examples of
-		= ' '
-		strong buttons
-		= ' '
-		a(href='buttons.html' title='Examples about buttons') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong buttons
+			= ' '
+			a(href='buttons.html' title='Examples about buttons') here
+			| .

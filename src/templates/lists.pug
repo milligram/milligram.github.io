@@ -1,4 +1,6 @@
 section.container#lists
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Lists
 	p.description
@@ -49,10 +51,11 @@ section.container#lists
 			| </dl>
 			= '\n\n'
 			| <!-- Easily change any <dl>, <ul> or an <ol> to get clear lists, number lists or outline circles. -->
-	p
-		| See more examples of
-		= ' '
-		strong lists
-		= ' '
-		a(href='lists.html' title='Examples about lists') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong lists
+			= ' '
+			a(href='lists.html' title='Examples about lists') here
+			| .

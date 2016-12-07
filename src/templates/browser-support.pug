@@ -1,10 +1,15 @@
 section.container#browser-support
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Browser Support
 	p.description
 		| While not designed for old browsers, Milligram has support for some old versions, but we recommend using the latest versions of their browsers.
 	div.example
 		ul
+			li Brave
+				= ' '
+				small latest
 			li Chrome
 				= ' '
 				small latest
@@ -23,10 +28,11 @@ section.container#browser-support
 			li Safari
 				= ' '
 				small latest
-	p
-		| See more examples of
-		= ' '
-		strong browser support
-		= ' '
-		a(href='browser-support.html' title='Examples about browser support') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong browser support
+			= ' '
+			a(href='browser-support.html' title='Examples about browser support') here
+			| .

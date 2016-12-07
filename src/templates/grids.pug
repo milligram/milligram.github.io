@@ -1,4 +1,6 @@
 section.container#grids
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Grids
 	p.description
@@ -49,10 +51,11 @@ section.container#grids
 			| </div>
 			= '\n\n'
 			| <!-- Every .column added inside a .row will automatically receive an equal amount of the available area. -->
-	p
-		| See more examples of
-		= ' '
-		strong grids
-		= ' '
-		a(href='grids.html' title='Examples about grids') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong grids
+			= ' '
+			a(href='grids.html' title='Examples about grids') here
+			| .

@@ -1,4 +1,6 @@
 section.container#forms
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Forms
 	p.description
@@ -44,10 +46,11 @@ section.container#forms
 			| </form>
 			= '\n\n'
 			| <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it -->
-	p
-		| See more examples of
-		= ' '
-		strong forms
-		= ' '
-		a(href='forms.html' title='Examples about forms') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong forms
+			= ' '
+			a(href='forms.html' title='Examples about forms') here
+			| .

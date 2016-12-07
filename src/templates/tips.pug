@@ -1,4 +1,6 @@
 section.container#tips
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Tips
 	p.description
@@ -105,10 +107,11 @@ section.container#tips
 			|   line-height: 4.5rem;
 			|   padding: 0 2rem;
 			| }
-	p
-		| See more examples of
-		= ' '
-		strong tips
-		= ' '
-		a(href='tips.html' title='Examples about tips') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong tips
+			= ' '
+			a(href='tips.html' title='Examples about tips') here
+			| .

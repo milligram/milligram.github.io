@@ -1,4 +1,6 @@
 section.container#utilities
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Utilities
 	p.description
@@ -15,10 +17,11 @@ section.container#utilities
 			|   <div class="float-right"></div>
 			= '\n\n'
 			| </div>
-	p
-		| See more examples of
-		= ' '
-		strong utilities
-		= ' '
-		a(href='utilities.html' title='Examples about utilities') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong utilities
+			= ' '
+			a(href='utilities.html' title='Examples about utilities') here
+			| .

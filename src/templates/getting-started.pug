@@ -1,4 +1,6 @@
 section.container#getting-started
+	if (!home)
+		include carbonads.pug
 	h5.title
 		| Getting Started
 	p.description
@@ -52,10 +54,11 @@ section.container#getting-started
 			| <link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
 			= '\n\n'
 			| <!-- You should properly set the path from the main file. -->
-	p
-		| See more examples of
-		= ' '
-		strong getting started
-		= ' '
-		a(href='getting-started.html' title='Examples about getting started') here
-		| .
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong getting started
+			= ' '
+			a(href='getting-started.html' title='Examples about getting started') here
+			| .
