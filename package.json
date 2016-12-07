@@ -66,7 +66,7 @@
 		"imagemin": "imagemin src/images/* -o dist/images",
 		"svgo": "svgo -f src/images/icons && mkdir -p dist/images && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
 		"serve": "browser-sync --no-notify start -s dist -f dist",
-		"build:misc": "cp -rf src/*.json dist && echo milligram.github.io > dist/CNAME",
+		"build:misc": "cp -rf src/*.json dist && cname dist",
 		"build:fonts": "run-s fonts",
 		"build:templates": "run-s pug validator",
 		"build:styles": "run-s sass-lint sass cssnano",
