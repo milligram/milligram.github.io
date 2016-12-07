@@ -1,8 +1,8 @@
 
-// Github
+// Octocat
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.github
+.octocat
 	border: 0
 	color: $color-tertiary
 	fill: $color-primary
@@ -13,8 +13,13 @@
 	width: 5.2rem
 	z-index: 99
 
-	&:hover .octo-arm
+	&:hover .octocat-arm
 		animation: octocat-wave 560ms infinite
+		transform-origin: 13.0rem 10.6rem
+
+	.octocat-arm,
+	.octocat-body
+		fill: $color-tertiary
 
 @keyframes octocat-wave
 	0%, 50%

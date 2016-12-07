@@ -1,0 +1,58 @@
+section.container#grids
+	h5.title
+		| Grids
+	p.description
+		| The Grid is a fluid system with a max width of
+		= ' '
+		code 112.0rem
+		= ' '
+		small (1120px)
+		| , that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Milligram is different than most because of its use of the
+		= ' '
+		strong CSS Flexible Box Layout Module standard
+		| . The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add columns you want in a row, and they'll evenly take up the available space. If you want three columns, add three columns, if you want five columns, add five columns. There is no restriction on number of columns, but we advise you to follow a design pattern of grid system. See more tips on best practices in the
+		a(href='#tips' title='Tips')  tips
+		| .
+	div.example
+		div.container
+			div.row
+				div.column
+					span.column-demo .column
+				div.column
+					span.column-demo .column
+				div.column
+					span.column-demo .column
+				div.column
+					span.column-demo .column
+			div.row
+				div.column
+					span.column-demo .column
+				div.column.column-50.column-offset-25
+					span.column-demo .column-50.column-offset-25
+	pre.code.prettyprint
+		code.code-content
+			| <!-- .container is main centered wrapper -->
+			| <div class="container">
+			= '\n\n'
+			|   <div class="row">
+			|     <div class="column">.column</div>
+			|     <div class="column">.column</div>
+			|     <div class="column">.column</div>
+			|     <div class="column">.column</div>
+			|   </div>
+			= '\n\n'
+			|   <div class="row">
+			|     <div class="column">.column</div>
+			|     <div class="column column-50 column-offset-25">.column column-50 column-offset-25</div>
+			|   </div>
+			= '\n\n'
+			| </div>
+			= '\n\n'
+			| <!-- Every .column added inside a .row will automatically receive an equal amount of the available area. -->
+	p
+		| See more examples of
+		= ' '
+		strong grids
+		= ' '
+		a(href='grids.html' title='Examples about grids') here
+		| .
