@@ -18,8 +18,9 @@
 		"backstopjs": "^2.3.3",
 		"bower": "^1.8.0",
 		"browser-sync": "^2.18.2",
+		"cname": "0.0.2",
 		"cssnano-cli": "^1.0.5",
-		"eslint": "^3.10.2",
+		"eslint": "^3.11.1",
 		"eslint-config-standard": "^6.2.1",
 		"eslint-plugin-promise": "^2.0.1",
 		"eslint-plugin-standard": "^2.0.1",
@@ -31,8 +32,8 @@
 		"imagemin-cli": "^3.0.0",
 		"node-sass": "^3.13.0",
 		"npm-check": "^5.4.0",
-		"npm-run-all": "^3.1.1",
-		"onchange": "^3.0.2",
+		"npm-run-all": "^3.1.2",
+		"onchange": "^3.2.0",
 		"opn-cli": "^3.1.0",
 		"plato": "^1.7.0",
 		"pug-cli": "^1.0.0-alpha6",
@@ -40,7 +41,7 @@
 		"sitespeed.io": "^3.11.8",
 		"svg-sprite-generator": "0.0.7",
 		"svgo": "^0.6.6",
-		"uglify-js": "^2.7.4"
+		"uglify-js": "^2.7.5"
 	},
 	"scripts": {
 		"postinstall": "bower install",
