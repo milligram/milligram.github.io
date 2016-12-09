@@ -153,19 +153,21 @@
 /* Larger than desktop screen */
 @media (min-width: 120.0rem) { ... }</code></pre><p>See more examples of <strong>tips</strong> <a href="tips.html" title="Examples about tips">here</a>.</p><p><strong>Extending The Inheritances</strong></p><p>The style of an element can be defined in several different locations, which interact in a complex way. It is this form of interaction makes CSS powerful, but it can make it confusing and difficult to debug.</p><div class="example"><div class="row"><div class="column"><a class="button" href="javascript: void(0)">Default .button</a><a class="button button-outline" href="javascript: void(0)">Outlined .button</a><a class="button button-clear" href="javascript: void(0)">Clear .button</a></div><div class="column"><a class="button button-black" href="javascript: void(0)">.button-black</a><a class="button button-black button-outline" href="javascript: void(0)">.button-black</a><a class="button button-black button-clear" href="javascript: void(0)">.button-black</a></div><div class="column column-20"><a class="button button-small" href="javascript: void(0)">.button-small</a><a class="button button-small button-outline" href="javascript: void(0)">.button-small</a><a class="button button-small button-clear" href="javascript: void(0)">.button-small</a></div><div class="column"><a class="button button-large" href="javascript: void(0)">.button-large</a><a class="button button-large button-outline" href="javascript: void(0)">.button-large</a><a class="button button-large button-clear" href="javascript: void(0)">.button-large</a></div></div></div><pre class="code prettyprint"><code class="code-content">/* Extending The Inheritances */
 
-/* Applying color variation */
+/* Custom color */
 .button-black {
   background-color: black;
   border-color: black;
 }
+.button-black.button-clear,
 .button-black.button-outline {
+  background-color: transparent;
   color: black;
 }
 .button-black.button-clear {
-  color: black;
+  border-color: transparent;
 }
 
-/* Applying size variation */
+/* Custom size */
 .button-small {
   font-size: .8rem;
   height: 2.8rem;
