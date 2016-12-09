@@ -35,11 +35,13 @@
 		background-color: #000
 		border-color: #000
 
-	.button-black.button-outline
-		color: #000
+		&.button-outline,
+		&.button-clear
+			background-color: transparent
+			color: #000
 
-	.button-black.button-clear
-		color: #000
+		&.button-clear
+			border-color: transparent
 
 	.button-large
 		font-size: 1.4rem
