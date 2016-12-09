@@ -81,19 +81,21 @@ section.container#tips
 		code.code-content
 			| /* Extending The Inheritances */
 			= '\n\n'
-			| /* Applying color variation */
+			| /* Custom color */
 			| .button-black {
 			|   background-color: black;
 			|   border-color: black;
 			| }
+			| .button-black.button-clear,
 			| .button-black.button-outline {
+			|   background-color: transparent;
 			|   color: black;
 			| }
 			| .button-black.button-clear {
-			|   color: black;
+			|   border-color: transparent;
 			| }
 			= '\n\n'
-			| /* Applying size variation */
+			| /* Custom size */
 			| .button-small {
 			|   font-size: .8rem;
 			|   height: 2.8rem;
