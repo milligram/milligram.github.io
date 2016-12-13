@@ -8,7 +8,7 @@
 	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
 	"private": "true",
 	"engines": {
-		"node": "^7.0.0"
+		"node": ">=4"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.18.0",
