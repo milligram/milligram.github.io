@@ -3,8 +3,8 @@
 > A minimalist CSS framework.
 
 [![Travis Status](https://travis-ci.org/milligram/milligram.github.io.svg?branch=develop)](https://travis-ci.org/milligram/milligram.github.io?branch=develop)
-[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/xcm8meymwerq0r82?svg=true)](https://ci.appveyor.com/project/cjpatoilo/milligram-github-io)
-[![Codacy Status](https://img.shields.io/codacy/grade/hhfcubm8taytk610/develop.svg)](https://www.codacy.com/app/milligram/milligram-github-io/dashboard)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/hhfcubm8taytk610?svg=true)](https://ci.appveyor.com/project/cjpatoilo/milligram-github-io)
+[![Codacy Status](https://img.shields.io/codacy/grade/951fe69c68f54c618e8b71b5347fe868/develop.svg)](https://www.codacy.com/app/milligram/milligram-github-io/dashboard)
 [![Dependencies Status](https://david-dm.org/milligram/milligram.github.io.svg)](https://travis-ci.org/milligram/milligram.github.io?branch=develop)
 [![Download Status](https://img.shields.io/npm/dt/milligram.svg)](https://www.npmjs.com/package/milligram)
 [![Version Status](https://badge.fury.io/js/milligram.svg)](https://www.npmjs.com/package/milligram)
