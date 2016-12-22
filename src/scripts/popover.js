@@ -2,15 +2,15 @@
 // Popover
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-;(() => {
+(() => {
 
 	'use strict';
 
-	var i,
-		href,
-		$popoverLinks = document.querySelectorAll('[data-popover]'),
-		$popovers	= document.querySelectorAll('.popover'),
-		$anchors = document.querySelectorAll('.navigation a');
+	const $popoverLinks = document.querySelectorAll('[data-popover]');
+	const $popovers = document.querySelectorAll('.popover');
+	const $anchors = document.querySelectorAll('.navigation a');
+	let i;
+	let href;
 
 	for (i = 0; i < $popoverLinks.length; i++) $popoverLinks[i].addEventListener('click', openPopover);
 
@@ -32,12 +32,6 @@
 			document.querySelector(this.getAttribute('href')).classList.add('popover-open');
 		}
 		event.stopImmediatePropagation();
-	}
-
-	// Change url in `localhost`
-	if (window.location.hostname !== 'localhost') return;
-	for (i = 0; i < $anchors.length; i++) {
-		if ( $anchors[i].href.match(/milligram.github.io/g) ) $anchors[i].href = $anchors[i].href.replace('https://milligram.github.io/', '');
 	}
 
 })();
