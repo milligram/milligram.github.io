@@ -54,6 +54,28 @@ section.container#getting-started
 			| <link rel="stylesheet" href="bower_components/milligram/dist/milligram.min.css">
 			= '\n\n'
 			| <!-- You should properly set the path from the main file. -->
+	p
+		strong CLI
+	p
+		| A CLI for getting started with Milligram. It offers a super simple boilerplate project with Milligram.
+	pre.code.prettyprint
+		code.code-content
+			| $ npm install -g milligram-cli
+	p
+		| Create a new app using the command
+		= ' '
+		code
+			| milligram init
+		|, then install dependencies and run with
+		= ' '
+		code
+			| npm start
+		| .
+	pre.code.prettyprint
+		code.code-content
+			| $ milligram init new_app
+			| $ cd new_app
+			| $ npm start
 	if (home)
 		p
 			| See more examples of
