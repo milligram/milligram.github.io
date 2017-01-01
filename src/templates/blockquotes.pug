@@ -1,0 +1,24 @@
+section.container#blockquotes
+	if (!home)
+		include carbonads.pug
+	h5.title
+		| Blockquotes
+	p.description
+		| The Blockquote represents a section that is quoted from another source.
+	div.example
+		blockquote
+			p
+				em Yeah!! Milligram is amazing.
+	pre.code.prettyprint
+		code.code-content
+			| <blockquote>
+			|   <p><em>Yeah!! Milligram is amazing.</em></p>
+			| </blockquote>
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong blockquotes
+			= ' '
+			a(href='blockquotes.html' title='Examples about blockquotes') here
+			| .

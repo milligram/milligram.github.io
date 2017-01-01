@@ -1,0 +1,27 @@
+section.container#utilities
+	if (!home)
+		include carbonads.pug
+	h5.title
+		| Utilities
+	p.description
+		| Milligram has some functional classes to improve the performance and productivity everyday.
+	pre.code.prettyprint
+		code.code-content
+			| <!-- Functional Classes -->
+			= '\n\n'
+			| <!-- Clear any float  -->
+			| <div class="clearfix">
+			= '\n\n'
+			|   <!-- Float either directions -->
+			|   <div class="float-left"></div>
+			|   <div class="float-right"></div>
+			= '\n\n'
+			| </div>
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong utilities
+			= ' '
+			a(href='utilities.html' title='Examples about utilities') here
+			| .

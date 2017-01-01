@@ -1,0 +1,61 @@
+section.container#lists
+	if (!home)
+		include carbonads.pug
+	h5.title
+		| Lists
+	p.description
+		| The List is a very versatile and common way to display items. Milligram has three types of lists: The unordered list use
+		= ' '
+		code ul
+		= ' '
+		| element will be marked with a outline circles, the ordered list use
+		= ' '
+		code ol
+		= ' '
+		| element and your items will be marked with numbers, the description list use
+		= ' '
+		code dl
+		= ' '
+		| element and your items will not be marking, only spacings.
+	div.row.example
+		div.column
+			ul
+				li Unordered list item 1
+				li Unordered list item 2
+		div.column
+			ol
+				li Ordered list item 1
+				li Ordered list item 2
+		div.column
+			dl
+				dt Description list item 1
+				dd Description list item 1.1
+	pre.code.prettyprint
+		code.code-content
+			| <!-- Unordered list -->
+			| <ul>
+			|   <li>Unordered list item 1</li>
+			|   <li>Unordered list item 2</li>
+			| </ul>
+			= '\n\n'
+			| <!-- Ordered list -->
+			| <ol>
+			|   <li>Ordered list item 1</li>
+			|   <li>Ordered list item 2</li>
+			| </ol>
+			= '\n\n'
+			| <!-- Description list -->
+			| <dl>
+			|   <dt>Description list item 1</dt>
+			|   <dd>Description list item 1.1</dd>
+			| </dl>
+			= '\n\n'
+			| <!-- Easily change any <dl>, <ul> or an <ol> to get clear lists, number lists or outline circles. -->
+	if (home)
+		p
+			| See more examples of
+			= ' '
+			strong lists
+			= ' '
+			a(href='lists.html' title='Examples about lists') here
+			| .

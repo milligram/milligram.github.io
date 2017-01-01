@@ -1,14 +1,14 @@
-<p align="center">
-	<a href="http://milligram.github.io"><img width="100%" src="https://milligram.github.io/images/thumbnail.jpg" alt="Milligram - A minimalist CSS framework"></a>
-</p>
+<a align="center" href="http://milligram.github.io"><img width="100%" src="https://milligram.github.io/images/thumbnail.png" alt="Milligram - A minimalist CSS framework"></a>
 
 > A minimalist CSS framework.
 
-[![Build Status](https://travis-ci.org/milligram/milligram.svg?branch=master)](https://travis-ci.org/milligram/milligram)
-[![Dependencies Status](https://david-dm.org/milligram/milligram.svg)](https://travis-ci.org/milligram/milligram)
-[![npm version](https://badge.fury.io/js/milligram.svg)](https://badge.fury.io/js/milligram)
-[![Bower version](https://badge.fury.io/bo/milligram.svg)](https://badge.fury.io/bo/milligram)
-[![Gitter chat](https://img.shields.io/badge/gitter-join_the_chat-4cc61e.svg)](https://gitter.im/milligram/milligram)
+[![Travis Status](https://travis-ci.org/milligram/milligram.github.io.svg?branch=develop)](https://travis-ci.org/milligram/milligram.github.io?branch=develop)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/hhfcubm8taytk610?svg=true)](https://ci.appveyor.com/project/cjpatoilo/milligram-github-io)
+[![Codacy Status](https://img.shields.io/codacy/grade/951fe69c68f54c618e8b71b5347fe868/develop.svg)](https://www.codacy.com/app/milligram/milligram-github-io/dashboard)
+[![Dependencies Status](https://david-dm.org/milligram/milligram.github.io.svg)](https://travis-ci.org/milligram/milligram.github.io?branch=develop)
+[![Download Status](https://img.shields.io/npm/dt/milligram.svg)](https://www.npmjs.com/package/milligram)
+[![Version Status](https://badge.fury.io/js/milligram.svg)](https://www.npmjs.com/package/milligram)
+[![Gitter Chat](https://img.shields.io/badge/gitter-join_the_chat-4cc61e.svg)](https://gitter.im/milligram/milligram)
 
 
 ## Why it's awesome?

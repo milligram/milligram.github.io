@@ -2,15 +2,14 @@
 // Opbeat
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-;(() => {
+(() => {
 
 	'use strict';
 
-	// if (window.location.hostname === 'localhost') return;
+	if (window.location.port === '3000') return;
 
-	const APP_ID = 'caba356019',
-		ORG_ID = 'ed5b6ca01e3e4e6a98b6e97142e06a63',
-		OPBEAT_URL = 'bower_components/opbeat-js/opbeat.min.js';
+	const appId = '39e235ed58';
+	const orgId = 'bfc2d2b1867d4ade86c9030c6985cfa2';
 
 	((i, s, o, g, r, a, m, n) => {
 		n = s.createElement(o);
@@ -20,6 +19,6 @@
 		n.setAttribute('data-app-id', a);
 		m = s.getElementsByTagName(o)[document.querySelectorAll(o).length - 1];
 		m.parentNode.insertBefore(n, m);
-	})(window, document, 'script', OPBEAT_URL, ORG_ID, APP_ID);
+	})(window, document, 'script', 'bower_components/opbeat-js/opbeat.min.js', orgId, appId);
 
 })();
