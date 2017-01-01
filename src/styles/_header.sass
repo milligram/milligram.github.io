@@ -23,9 +23,15 @@
 		font-family: 'Gotham Rounded A', 'Gotham Rounded B', 'Helvetica Neue', Arial, sans-serif
 
 	.img
-		fill: $color-primary
 		height: 15.0rem
 		margin-bottom: 2rem
+		path
+			fill: $color-primary
+			stroke: $color-primary
+			stroke-miterlimit: 10
+			stroke-width: 15px
+			stroke-dasharray: 38321
+			animation: 7s anilligram forwards
 
 	.button
 		margin-bottom: 4rem
@@ -34,3 +40,16 @@
 		@media (min-width: 40.0rem)
 			margin-bottom: 4rem
 			margin-top: 2rem
+
+// Logo animation
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@keyframes anilligram
+	0%
+		fill-opacity: 0
+		stroke-dashoffset: 38321
+	25%
+		fill-opacity: 0
+		stroke: $color-primary
+	100%
+		fill-opacity: 1
+		stroke-dashoffset: 0
