@@ -1,8 +1,14 @@
-module.exports = {
-	viewports: [
-		{ name: 'phone', width: 320, height: 480 },
-		{ name: 'laptop', width: 1280, height: 800 }
-	],
+'use strict'
+const config = {
+	viewports: [{
+		name: 'phone',
+		width: 320,
+		height: 480
+	}, {
+		name: 'laptop',
+		width: 1280,
+		height: 800
+	}],
 	scenarios: [{
 		label: 'Typography',
 		url: 'http://localhost:3000',
@@ -111,8 +117,14 @@ module.exports = {
 		ci_report: 'node_modules/backstopjs/.tmp/ci_report'
 	},
 	engine: 'phantomjs',
-	report: ['browser', 'CLI', 'CI'],
+	report: [
+		'browser',
+		'CLI',
+		'CI'
+	],
 	casperFlags: [],
 	debug: false,
 	port: 3002
 }
+
+module.exports = config

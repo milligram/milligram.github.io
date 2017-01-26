@@ -19,5 +19,5 @@
 		e.src = d
 		r = o.getElementsByTagName(a)[document.querySelectorAll(a).length - 1]
 		r.parentNode.insertBefore(e, r)
-	})(window, document, 'script', '//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js')
+	})(window, document, 'script', 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js')
 })()

@@ -16,5 +16,5 @@
 		m.parentNode.insertBefore(n, m)
 	}
 
-	opbeat(window, document, 'script', '//d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js', orgId, appId)
+	opbeat(window, document, 'script', 'https://d3tvtfb6518e3e.cloudfront.net/3/opbeat.min.js', orgId, appId)
 })()
