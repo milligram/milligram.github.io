@@ -30,6 +30,12 @@ $ bower install milligram
 $ npm install milligram
 ```
 
+**Install with Yarn**
+
+```sh
+$ yarn add milligram
+```
+
 
 ## Table of Contents
 
