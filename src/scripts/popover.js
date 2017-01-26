@@ -1,33 +1,28 @@
 (() => {
+	'use strict'
 
-	'use strict';
+	const $popoverLinks = document.querySelectorAll('[data-popover]')
+	const $popovers = document.querySelectorAll('.popover')
+	let i
 
-	const $popoverLinks = document.querySelectorAll('[data-popover]');
-	const $popovers = document.querySelectorAll('.popover');
-	const $anchors = document.querySelectorAll('.navigation a');
-	let i;
-	let href;
+	for (i = 0; i < $popoverLinks.length; i++) $popoverLinks[i].addEventListener('click', openPopover)
 
-	for (i = 0; i < $popoverLinks.length; i++) $popoverLinks[i].addEventListener('click', openPopover);
-
-	document.addEventListener('click', closePopover);
+	document.addEventListener('click', closePopover)
 
 	// Close Popover
-	function closePopover(event) {
-		for (i = 0; i < $popovers.length; i++) $popovers[i].classList.remove('popover-open');
+	function closePopover (event) {
+		for (i = 0; i < $popovers.length; i++) $popovers[i].classList.remove('popover-open')
 	}
 
 	// Open Popover
-	function openPopover(event) {
-		event.preventDefault();
+	function openPopover (event) {
+		event.preventDefault()
 		if (document.querySelector(this.getAttribute('href')).classList.contains('popover-open')) {
-			document.querySelector(this.getAttribute('href')).classList.remove('popover-open');
+			document.querySelector(this.getAttribute('href')).classList.remove('popover-open')
+		} else {
+			closePopover()
+			document.querySelector(this.getAttribute('href')).classList.add('popover-open')
 		}
-		else {
-			closePopover();
-			document.querySelector(this.getAttribute('href')).classList.add('popover-open');
-		}
-		event.stopImmediatePropagation();
+		event.stopImmediatePropagation()
 	}
-
-})();
+})()

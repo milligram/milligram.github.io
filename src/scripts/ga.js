@@ -1,25 +1,24 @@
 (() => {
+	'use strict'
 
-	'use strict';
+	if (window.location.port === '3000') return
 
-	if (window.location.port === '3000') return;
+	const appId = 'UA-24389952-15'
 
-	const appId = 'UA-24389952-15';
+	function analytics (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r
+		i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}
+		i[r].l = 1 * new Date()
+		a = s.createElement(o)
+		m = s.getElementsByTagName(o)[0]
+		a.async = 1
+		a.src = g
+		m.parentNode.insertBefore(a, m)
+	}
 
-	((i, s, o, g, r, a, m) => {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function() {
-			(i[r].q = i[r].q || []).push(arguments);
-		},
-		i[r].l = 1 * new Date();
-		a = s.createElement(o);
-		m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m);
-	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-	ga('create', appId, 'auto');
-	ga('send', 'pageview');
-
-})();
+	analytics(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
+	ga('create', appId, 'auto')
+	ga('send', 'pageview')
+})()
