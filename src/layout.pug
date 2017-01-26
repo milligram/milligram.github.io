@@ -1,37 +1,46 @@
+- var name = 'Milligram - A minimalist CSS framework.'
+- var description = 'Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code.'
+- var homepage = 'https://milligram.github.io'
+- var author = 'CJ Patoilo'
+- var thumbnail = 'images/thumbnail.png'
+- var icon = 'images/icon.png'
+- var color = '#f4f5f6'
+
 doctype html
 html(lang='en')
+
 	head
+
 		meta(charset='utf-8')
 		meta(http-equiv='x-ua-compatible' content='ie=edge')
 		meta(name='robots' content='index, follow')
-		meta(name='theme-color' content='#f4f5f6')
-		meta(name='apple-mobile-web-app-status-bar-style' content='#f4f5f6')
+		meta(name='theme-color' content=color)
+		meta(name='apple-mobile-web-app-status-bar-style' content=color)
 		meta(name='apple-mobile-web-app-capable' content='yes')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
-		meta(name='author' content='CJ Patoilo')
-		meta(name='description' content='Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code.')
-		meta(property='og:url' content='https://milligram.github.io/')
-		meta(property='og:type' content='article')
-		meta(property='og:title' content='Milligram - A minimalist CSS framework.')
-		meta(property='og:description' content='Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code.')
-		meta(property='og:image' content='images/thumbnail.png')
+		meta(name='author' content=author)
+		meta(name='description' content=description)
+		meta(property='og:url' content=homepage)
+		meta(property='og:type' content='website')
+		meta(property='og:title' content=name)
+		meta(property='og:description' content=description)
+		meta(property='og:image' content=thumbnail)
 		meta(name='twitter:card' content='summary_large_image')
-		meta(name='twitter:site' content='@milligramcss')
-		meta(name='twitter:creator' content='@cjpatoilo')
-		meta(name='twitter:title' content='Milligram - A minimalist CSS framework.')
-		meta(name='twitter:description' content='Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code.')
-		meta(name='twitter:image' content='images/thumbnail.png')
+		meta(name='twitter:site' content=homepage)
+		meta(name='twitter:creator' content=author)
+		meta(name='twitter:title' content=name)
+		meta(name='twitter:description' content=description)
+		meta(name='twitter:image' content=thumbnail)
 		block title
-			title Milligram - A minimalist CSS framework.
-		link(rel='manifest' href='manifest.json')
-		link(rel='icon' href='images/favicon.ico')
-		link(rel='apple-touch-icon' href='images/apple-touch-icon.png')
-		link(rel='canonical' href='https://milligram.github.io/')
-		link(rel='image_src' href='images/thumbnail.png')
+			title= name
+		link(rel='icon' href=icon)
+		link(rel='apple-touch-icon' href=icon)
+		link(rel='canonical' href=homepage)
+		link(rel='image_src' href=thumbnail)
 		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic')
-		link(rel='stylesheet' href='bower_components/normalize.css/normalize.css')
-		link(rel='stylesheet' href='bower_components/milligram/dist/milligram.min.css')
-		link(rel='stylesheet' href='styles/main.min.css')
+		link(rel='stylesheet' href='lib/bundle.css')
+		link(rel='stylesheet' href='styles/main.css')
+
 	body
 
 		main.wrapper
@@ -155,4 +164,4 @@ html(lang='en')
 						a(href="https://github.com/milligram/milligram#license" title="MIT License" target="_blank")  MIT License
 						| .
 
-		script(src='scripts/main.min.js')
+		script(src='scripts/main.js')
