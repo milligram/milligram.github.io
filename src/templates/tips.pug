@@ -49,12 +49,31 @@ section.container#tips
 			| /* Larger than desktop screen */
 			| @media (min-width: 120.0rem) { ... }
 	p
-		| See more examples of
+		strong Embed Font
+	p
+		strong Milligram
 		= ' '
-		strong tips
+		| uses the
 		= ' '
-		a(href='tips.html' title='Examples about tips') here
-		| .
+		code font-family
+		a(href='https://www.google.com/fonts/specimen/Roboto' title='Roboto by Christian Robertson' target='_blank')  Roboto
+		| , created by
+		= ' '
+		u Christian Robertson
+		| , and provided by Google.
+		| Customize your projects using
+		= ' '
+		a(href='https://fonts.google.com') Google Fonts
+		|. To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document.
+	pre.code.prettyprint
+		code.code-content
+			| /* Embed Font */
+			| <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
+			= '\n\n'
+			| /* Use the following CSS rules to specify these families */
+			| body {
+			|   font-family: 'Roboto Slab', serif;
+			| }
 	p
 		strong Extending The Inheritances
 	p
