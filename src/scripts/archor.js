@@ -3,7 +3,7 @@
 
 	if (window.location.port === '3000') return
 
-	const url = 'https://milligram.github.io'
+	const url = 'http://milligram.io'
 	const $anchors = document.querySelectorAll('.navigation .popover-link')
 	let i
 
