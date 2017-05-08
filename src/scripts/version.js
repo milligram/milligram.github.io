@@ -16,7 +16,7 @@
 
 	if (!$description || !$download) return
 
-	request.open('GET', `//raw.githubusercontent.com/${repository}/master/package.json`, true)
+	request.open('GET', `//cdn.rawgit.com/${repository}/master/package.json`, true)
 	request.onload = onload
 	request.send()
 })()
