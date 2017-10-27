@@ -1,4 +1,4 @@
-<a align="center" href="http://milligram.io"><img width="100%" src="http://milligram.io/images/thumbnail.png" alt="Milligram - A minimalist CSS framework"></a>
+<a align="center" href="https://milligram.io"><img width="100%" src="https://milligram.io/images/thumbnail.png" alt="Milligram - A minimalist CSS framework"></a>
 
 > A minimalist CSS framework.
 
@@ -39,19 +39,19 @@ $ yarn add milligram
 
 ## Table of Contents
 
-- [Getting Started](http://milligram.io/#getting-started)
-- [Typography](http://milligram.io/#typography)
-- [Blockquotes](http://milligram.io/#blockquotes)
-- [Buttons](http://milligram.io/#buttons)
-- [Lists](http://milligram.io/#lists)
-- [Forms](http://milligram.io/#forms)
-- [Tables](http://milligram.io/#tables)
-- [Grids](http://milligram.io/#grids)
-- [Codes](http://milligram.io/#codes)
-- [Utilities](http://milligram.io/#utilities)
-- [Tips](http://milligram.io/#tips)
-- [Browser Support](http://milligram.io/#browser-support)
-- [Examples](http://milligram.io/#examples)
+- [Getting Started](https://milligram.io/#getting-started)
+- [Typography](https://milligram.io/#typography)
+- [Blockquotes](https://milligram.io/#blockquotes)
+- [Buttons](https://milligram.io/#buttons)
+- [Lists](https://milligram.io/#lists)
+- [Forms](https://milligram.io/#forms)
+- [Tables](https://milligram.io/#tables)
+- [Grids](https://milligram.io/#grids)
+- [Codes](https://milligram.io/#codes)
+- [Utilities](https://milligram.io/#utilities)
+- [Tips](https://milligram.io/#tips)
+- [Browser Support](https://milligram.io/#browser-support)
+- [Examples](https://milligram.io/#examples)
 
 
 ## Contributing
