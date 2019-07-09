@@ -61,4 +61,4 @@ Want to contribute? Follow these [recommendations](https://github.com/milligram/
 
 ## License
 
-Designed with ♥ by [CJ Patoilo](http://cjpatoilo.com). Licensed under the [MIT License](http://cjpatoilo.mit-license.org).
+Designed with ♥ by [CJ Patoilo](https://twitter.com/cjpatoilo). Licensed under the [MIT License](license).
