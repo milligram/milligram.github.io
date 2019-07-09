@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["blockquotes.html","a1f3897a450d56446399765ef4e1bd44"],["browser-support.html","809144f9a9748f57ab8ac89a25603459"],["buttons.html","0aec72c37a5c216ee513a33a8ede9fa7"],["codes.html","53c5e392da65ee9f3a897a84c682d07b"],["forms.html","1cc79627f88eb2187d3742843fd005e2"],["getting-started.html","bd22806302f65638a27d145643725f98"],["grids.html","43da973e3438894293304ac1c65a101a"],["images/android-chrome-192x192.png","b623b00d820f08f94c60248f8e69330e"],["images/android-chrome-512x512.png","4da437ca92fe71a75f937bdb81be3722"],["images/apple-touch-icon.png","9ffcf9def69d306b46044001e4cd0072"],["images/favicon-16x16.png","fbe56c6a694da9888366b58d29e5f2cf"],["images/favicon-32x32.png","ab2bda1f5b42cd2432ea7fde52c82a05"],["images/icon.png","a2f3dee9129774da529f6934842c6aee"],["images/logo.svg","ab59c9fcc1e1fb86e77644dcbffc8a23"],["images/mstile-150x150.png","2d02d21a75e58220c60d64bfab66b91d"],["images/thumbnail.png","bda9068fe9d3fc41347fd2de65bc8007"],["index.html","110ee777d99fd91d50966f831d1b9351"],["lists.html","0ab80a6d7cef55782ff69e031dafc66f"],["manifest.json","9a36a5147c81b3d12ba906c919a98133"],["scripts/main.js","a64a39f952136c7fba15d566143535b0"],["styles/main.css","63a68ba570d432009994daf977950492"],["tables.html","8c3c9f910da1d04b3131db5967ba5627"],["tips.html","76e982bcac4ce6e232013fbb97832d3c"],["typography.html","2d12c11a0c3c866a0f6e83897fd58588"],["utilities.html","db1910ce63388d81ef468d3eb9eeb89e"]];
+var precacheConfig = [["blockquotes.html","a1f3897a450d56446399765ef4e1bd44"],["browser-support.html","809144f9a9748f57ab8ac89a25603459"],["buttons.html","0aec72c37a5c216ee513a33a8ede9fa7"],["code.html","53c5e392da65ee9f3a897a84c682d07b"],["forms.html","1cc79627f88eb2187d3742843fd005e2"],["getting-started.html","bd22806302f65638a27d145643725f98"],["grids.html","43da973e3438894293304ac1c65a101a"],["images/android-chrome-192x192.png","b623b00d820f08f94c60248f8e69330e"],["images/android-chrome-512x512.png","4da437ca92fe71a75f937bdb81be3722"],["images/apple-touch-icon.png","9ffcf9def69d306b46044001e4cd0072"],["images/favicon-16x16.png","fbe56c6a694da9888366b58d29e5f2cf"],["images/favicon-32x32.png","ab2bda1f5b42cd2432ea7fde52c82a05"],["images/icon.png","a2f3dee9129774da529f6934842c6aee"],["images/logo.svg","ab59c9fcc1e1fb86e77644dcbffc8a23"],["images/mstile-150x150.png","2d02d21a75e58220c60d64bfab66b91d"],["images/thumbnail.png","bda9068fe9d3fc41347fd2de65bc8007"],["index.html","110ee777d99fd91d50966f831d1b9351"],["lists.html","0ab80a6d7cef55782ff69e031dafc66f"],["manifest.json","9a36a5147c81b3d12ba906c919a98133"],["scripts/main.js","a64a39f952136c7fba15d566143535b0"],["styles/main.css","63a68ba570d432009994daf977950492"],["tables.html","8c3c9f910da1d04b3131db5967ba5627"],["tips.html","76e982bcac4ce6e232013fbb97832d3c"],["typography.html","2d12c11a0c3c866a0f6e83897fd58588"],["utilities.html","db1910ce63388d81ef468d3eb9eeb89e"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -176,10 +176,10 @@ self.addEventListener('install', function(event) {
         );
       });
     }).then(function() {
-      
+
       // Force the SW to transition from installing -> active state
       return self.skipWaiting();
-      
+
     })
   );
 });
@@ -199,9 +199,9 @@ self.addEventListener('activate', function(event) {
         );
       });
     }).then(function() {
-      
+
       return self.clients.claim();
-      
+
     })
   );
 });
@@ -262,7 +262,7 @@ self.addEventListener('fetch', function(event) {
 
 
 // *** Start of auto-included sw-toolbox code. ***
-/* 
+/*
  Copyright 2016 Google Inc. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -280,9 +280,3 @@ self.addEventListener('fetch', function(event) {
 
 
 // *** End of auto-included sw-toolbox code. ***
-
-
-
-
-
-
