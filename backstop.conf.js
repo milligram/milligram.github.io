@@ -87,11 +87,11 @@ const config = {
 		onReadyScript: null,
 		onBeforeScript: null
 	}, {
-		label: 'Codes',
+		label: 'Code',
 		url: 'http://localhost:3000',
 		hideSelectors: [],
 		removeSelectors: [],
-		selectors: ['#codes'],
+		selectors: ['#code'],
 		readyEvent: null,
 		delay: 2000,
 		misMatchThreshold: 0.1,
