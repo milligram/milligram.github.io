@@ -6,9 +6,9 @@
 	"repository": "milligram/milligram.github.io",
 	"license": "MIT",
 	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
-	"private": "true",
+	"private": true,
 	"engines": {
-		"node": ">=10.0.0"
+		"node": "^10.0.0"
 	},
 	"dependencies": {
 		"milligram": "latest"
