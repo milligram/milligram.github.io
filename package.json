@@ -62,8 +62,8 @@
 		"reference": "backstop reference --configPath=backstop.conf.js",
 		"clean": "rimraf dist",
 		"server": "browser-sync --no-notify start -s dist -f dist",
-		"publish": "copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
-		"prepush": "run-s build publish",
+		"deploy": "copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
+		"prepush": "run-s build deploy",
 		"precommit": "run-p lint"
 	}
 }
