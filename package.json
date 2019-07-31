@@ -37,10 +37,11 @@
 	},
 	"scripts": {
 		"start": "run-s build watch",
+		"server": "browser-sync --no-notify start -s dist -f dist",
 		"build": "run-s clean && run-p build:misc build:fonts build:templates build:styles build:scripts build:images",
 		"build:misc": "cname dist",
 		"build:fonts": "copycopy src/fonts dist",
-		"build:templates": "htmlcompile src dist && rimraf dist/templates && rimraf dist/layout.html",
+		"build:templates": "htmlcompile src dist",
 		"build:styles": "csscompile src/styles dist/styles",
 		"build:scripts": "jscompile src/scripts dist/scripts",
 		"build:images": "imgcompile src/images dist/images",
@@ -61,9 +62,8 @@
 		"compare": "backstop test --configPath=backstop.conf.js",
 		"reference": "backstop reference --configPath=backstop.conf.js",
 		"clean": "rimraf dist",
-		"server": "browser-sync --no-notify start -s dist -f dist",
-		"deploy": "copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
-		"prepush": "run-s build deploy",
+		"clean:unnecessary": "rimraf dist/layout.html dist/fonts dist/templates",
+		"prepush": "run-s build clean:unnecessary && copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
 		"precommit": "run-p lint"
 	}
 }
