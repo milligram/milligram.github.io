@@ -1,0 +1,40 @@
+.button--clipboard
+  background-color: #eee
+  background-image: linear-gradient(#fcfcfc, #eee)
+  border: 0
+  border-radius: 0
+  fill: $color-quinary
+  height: 4.6rem
+  padding: 0
+  position: absolute
+  right: 0
+  top: 0
+  width: 4.6rem
+
+  &:focus,
+  &:hover
+    *
+      opacity: .3
+
+  &.tooptip--clipboard:after
+    background: rgba($color-secondary, .5)
+    border-radius: 1.0rem
+    color: #fcfcfc
+    content: 'Copied!'
+    display: block
+    font-size: 1.1rem
+    font-weight: normal
+    line-height: 2.5rem
+    padding: 0 .6rem
+    position: absolute
+    right: 100%
+    text-transform: capitalize
+    top: 50%
+    transform: translate(-.4rem, -50%)
+
+  > *
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 1.3rem
