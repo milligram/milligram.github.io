@@ -1,22 +1,29 @@
-// (() => {
-// 	'use strict'
+(() => {
+	const $snippets = document.querySelectorAll('.code:not(.lang-md) .code-content')
 
-// 	const $snippets = document.querySelectorAll('.code-content')
-// 	let i
+	for (let index = 0; index < $snippets.length; index++) {
+    $snippets[index].insertAdjacentHTML('afterend', `<button class="button--clipboard" data-clipboard-action="copy"><img src="https://clipboardjs.com/assets/images/clippy.svg"></button>`)
+    $snippets[index].nextElementSibling.setAttribute('data-clipboard-text', parserContent($snippets[index].innerHTML))
+  }
 
-// 	for (i = 0; i < $snippets.length; i++) {
-// 		console.log($snippets[i]);
-// 		// $snippets[i].appendChild('<button class="button--clipboard"><img class="clippy" width="13" src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard"></button>')
-// 	}
+  const clipboards = new ClipboardJS('.button--clipboard')
+  clipboards.on('success', event => {
+    event.clearSelection()
+    event.trigger.classList.add('tooptip--clipboard')
+    setTimeout(() => {
+      event.trigger.classList.remove('tooptip--clipboard')
+    }, 500)
+  })
+  clipboards.on('error', event => {
+    console.error('[clipboard]', event.trigger)
+  })
 
-// 	// const clipboard = new Clipboard('[data-clipboard]', {
-// 	// 	target: trigger => console.log(trigger)
-// 	// })
-
-// 	// clipboard.on('success', event => {
-// 	// 	event.clearSelection()
-// 	// 	showTooltip(event.trigger, 'Copied!')
-// 	// })
-
-// 	// clipboard.on('error', event => showTooltip(event.trigger, fallbackMessage(event.action)))
-// })()
+  function parserContent (content) {
+    return content
+      .replace(/\$ /g, '')
+      .replace(/<!--(.*?)-->/g, '')
+      .replace(/\/\* (.*?)\/\ */g, '')
+      .replace(/\n\s*\n/g, '\n')
+      .trim()
+  }
+})()
