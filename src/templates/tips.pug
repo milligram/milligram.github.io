@@ -1,5 +1,5 @@
 section.container#tips
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Tips
@@ -128,7 +128,7 @@ section.container#tips
 			|   line-height: 4.5rem;
 			|   padding: 0 2rem;
 			| }
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

@@ -1,5 +1,5 @@
 section.container#browser-support
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Browser Support
@@ -28,7 +28,7 @@ section.container#browser-support
 			li Safari
 				= ' '
 				small latest
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

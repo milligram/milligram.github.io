@@ -1,7 +1,7 @@
 (() => {
 	'use strict'
 
-	if (window.location.port === '3000') return
+	if (window.environment === 'development') return
 
 	const appId = 'UA-24389952-15'
 
