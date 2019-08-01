@@ -1,3 +1,1 @@
-if ('serviceWorker' in window.navigator && window.location.protocol === 'https:') {
-	window.navigator.serviceWorker.register('/service-worker.js')
-}
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/service-worker.js')
