@@ -1,5 +1,5 @@
 section.container#grids
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Grids
@@ -51,7 +51,7 @@ section.container#grids
 			| </div>
 			= '\n\n'
 			| <!-- Every .column added inside a .row will automatically receive an equal amount of the available area. -->
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

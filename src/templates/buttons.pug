@@ -1,5 +1,5 @@
 section.container#buttons
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Buttons
@@ -35,7 +35,7 @@ section.container#buttons
 			| <input class="button button-clear" type="submit" value="Clear Button">
 			= '\n\n'
 			| <!-- Easily apply the .button class for button style in the anchor element. -->
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

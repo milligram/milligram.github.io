@@ -1,5 +1,5 @@
 section.container#blockquotes
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Blockquotes
@@ -14,7 +14,7 @@ section.container#blockquotes
 			| <blockquote>
 			|   <p><em>Yeah!! Milligram is amazing.</em></p>
 			| </blockquote>
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

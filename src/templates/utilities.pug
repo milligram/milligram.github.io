@@ -1,5 +1,5 @@
 section.container#utilities
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Utilities
@@ -17,7 +17,7 @@ section.container#utilities
 			|   <div class="float-right"></div>
 			= '\n\n'
 			| </div>
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

@@ -1,5 +1,5 @@
 section.container#getting-started
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Getting Started
@@ -83,7 +83,7 @@ section.container#getting-started
 			| $ milligram init new_app
 			| $ cd new_app
 			| $ npm start
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

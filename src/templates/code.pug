@@ -1,5 +1,5 @@
 section.container#code
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Code
@@ -29,7 +29,7 @@ section.container#code
 			|   color: #9b4dca;
 			| }
 			| </code></pre>
-	if (home)
+	if (isHome)
 		p
 			| See more
 			= ' '

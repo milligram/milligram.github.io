@@ -1,5 +1,5 @@
 section.container#lists
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Lists
@@ -51,7 +51,7 @@ section.container#lists
 			| </dl>
 			= '\n\n'
 			| <!-- Easily change any <dl>, <ul> or an <ol> to get clear lists, number lists or outline circles. -->
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '

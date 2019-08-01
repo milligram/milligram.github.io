@@ -1,5 +1,5 @@
 section.container#forms
-	if (!home)
+	if (!isHome)
 		include carbonads.pug
 	h3.title
 		| Forms
@@ -47,7 +47,7 @@ section.container#forms
 			| </form>
 			= '\n\n'
 			| <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it -->
-	if (home)
+	if (isHome)
 		p
 			| See more examples of
 			= ' '
