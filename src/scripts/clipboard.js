@@ -1,4 +1,8 @@
 (() => {
+	'use strict'
+
+	if (!ClipboardJS) return
+
 	const $snippets = document.querySelectorAll('.code:not(.lang-md) .code-content')
 
 	for (let index = 0; index < $snippets.length; index++) {
