@@ -9,12 +9,10 @@
 
 	document.addEventListener('click', closePopover)
 
-	// Close Popover
 	function closePopover (event) {
 		for (i = 0; i < $popovers.length; i++) $popovers[i].classList.remove('popover-open')
 	}
 
-	// Open Popover
 	function openPopover (event) {
 		event.preventDefault()
 		if (document.querySelector(this.getAttribute('href')).classList.contains('popover-open')) {
