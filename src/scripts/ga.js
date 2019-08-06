@@ -5,6 +5,10 @@
 
 	const appId = 'UA-24389952-15'
 
+	analytics(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+	window.ga('create', appId, 'auto')
+	window.ga('send', 'pageview')
+
 	function analytics (i, s, o, g, r, a, m) {
 		i['GoogleAnalyticsObject'] = r
 		i[r] = i[r] || function () {
@@ -17,8 +21,4 @@
 		a.src = g
 		m.parentNode.insertBefore(a, m)
 	}
-
-	analytics(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
-	ga('create', appId, 'auto')
-	ga('send', 'pageview')
 })()

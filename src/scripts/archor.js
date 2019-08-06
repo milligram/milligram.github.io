@@ -5,9 +5,8 @@
 
 	const url = 'https://milligram.io'
 	const $anchors = document.querySelectorAll('.navigation .popover-link')
-	let i
 
-	for (i = 0; i < $anchors.length; i++) {
-		if ($anchors[i].href.match(/#/g)) $anchors[i].href = `${url}/#${$anchors[i].href.split('#')[1]}`
+	for (let index = 0; index < $anchors.length; index++) {
+		if ($anchors[index].href.match(/#/g)) $anchors[index].href = `${url}/#${$anchors[index].href.split('#')[1]}`
 	}
 })()
