@@ -3,14 +3,17 @@
 
 	const $popoverLinks = document.querySelectorAll('[data-popover]')
 	const $popovers = document.querySelectorAll('.popover')
-	let i
 
-	for (i = 0; i < $popoverLinks.length; i++) $popoverLinks[i].addEventListener('click', openPopover)
+	for (let index = 0; index < $popoverLinks.length; index++) {
+		$popoverLinks[index].addEventListener('click', openPopover)
+	}
 
 	document.addEventListener('click', closePopover)
 
 	function closePopover (event) {
-		for (i = 0; i < $popovers.length; i++) $popovers[i].classList.remove('popover-open')
+		for (let index = 0; index < $popovers.length; index++) {
+			$popovers[index].classList.remove('popover-open')
+		}
 	}
 
 	function openPopover (event) {

@@ -1,7 +1,7 @@
 (() => {
 	'use strict'
 
-	if (!ClipboardJS) return
+	if (!window.ClipboardJS) return
 
 	const $snippets = document.querySelectorAll('.code:not(.lang-md) .code-content')
 
@@ -10,7 +10,7 @@
 		$snippets[index].nextElementSibling.setAttribute('data-clipboard-text', parserContent($snippets[index].innerHTML))
 	}
 
-	const clipboards = new ClipboardJS('.button--clipboard')
+	const clipboards = new window.ClipboardJS('.button--clipboard')
 	clipboards.on('success', event => {
 		event.clearSelection()
 		event.trigger.classList.add('tooptip--clipboard')
