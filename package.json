@@ -63,7 +63,6 @@
 		"reference": "backstop reference --configPath=backstop.conf.js",
 		"clean": "rimraf dist",
 		"clean:unnecessary": "rimraf dist/layout.html dist/fonts dist/templates",
-		"prepush": "run-s build clean:unnecessary && copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
-		"precommit": "run-p lint"
+		"deploy": "run-s build clean:unnecessary && copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master"
 	}
 }
