@@ -1,6 +1,6 @@
 {
 	"name": "milligram.github.io",
-	"version": "0.4.2",
+	"version": "0.5.0",
 	"description": "Milligram website",
 	"homepage": "https://milligram.io",
 	"repository": "milligram/milligram.github.io",
@@ -63,7 +63,6 @@
 		"reference": "backstop reference --configPath=backstop.conf.js",
 		"clean": "rimraf dist",
 		"clean:unnecessary": "rimraf dist/layout.html dist/fonts dist/templates",
-		"prepush": "run-s build clean:unnecessary && copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master",
-		"precommit": "run-p lint"
+		"deploy": "run-s build clean:unnecessary && copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master"
 	}
 }
