@@ -1,5 +1,33 @@
 language: node_js
+
 node_js:
-  - 10
+  - 12.17.0
+
 before_install:
   - npm i -g npm
+
+steps:
+  - checkout
+
+  - run:
+      name: Update npm
+      command: sudo npm i -g npm@latest
+
+  - restore_cache:
+      keys:
+        - dependency-cache-{{ checksum "package.json" }}
+        - dependency-cache-
+
+  - run:
+      name: Install Dependecies
+      command: npm i
+
+  - save_cache:
+      key: dependency-cache-{{ checksum "package.json" }}
+      paths:
+        - ./node_modules
+        - ./.next/cache
+
+  - run:
+      name: Test Coverage
+      command: npm t
