@@ -1,0 +1,31 @@
+
+// Octocat
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.octocat
+  border: 0
+  color: $color-tertiary
+  fill: $color-primary
+  height: 5.2rem
+  position: fixed
+  right: 0
+  top: 0
+  width: 5.2rem
+  z-index: 99
+
+  &:hover .octocat-arm
+    animation: octocat-wave 560ms infinite
+    transform-origin: 13.0rem 10.6rem
+
+  .octocat-arm,
+  .octocat-body
+    fill: $color-tertiary
+
+@keyframes octocat-wave
+  0%,
+  50%
+    transform: rotate(0)
+
+  25%,
+  75%
+    transform: rotate(-25deg)
