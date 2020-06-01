@@ -1,0 +1,10 @@
+export default () => (
+  <div className="carbonads">
+    <script
+      id="_carbonads_js"
+      src="https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=milligramgithubio"
+      async
+      defer
+    ></script>
+  </div>
+)
