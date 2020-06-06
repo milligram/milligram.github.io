@@ -1,8 +1,10 @@
 <!--
 
-Contributing
-==============================
 We would love for you to contribute to Milligram and help us make this even better! Start reading this [document](contributing.md) to see it is not difficult as you might have imagined.
+
+Open an Issue
+==============================
+[Open an Issue](../../../issues/new) to report any problems or improvements. When necessary, use [Codepen](http://codepen.io/) to show the problem. Be sure to include some description to explain the problem.
 
 Code of Conduct
 ==============================
@@ -14,20 +16,27 @@ By contributing your code, you agree to license your contribution under the [MIT
 
 -->
 
+### Version info
+
+<!-- What versions of the following libraries are you using? Note that your issue may already
+be fixed in the latest versions. -->
+
+**Milligram:**
+
+**Other (e.g. normalize.css, node.js, npm, bower, browser, operating system) (if applicable):**
+
+### Test case
+
+<!-- Provide code samples on [Codepen](http://codepen.io/). -->
+
 ### Steps to reproduce
 
-Tell us what steps to reproduce the issue. (If applicable, provide code sample on [Codepen](https://codepen.io/))
+<!-- Provide the steps needed to reproduce the issue given the above test case. -->
 
 ### Expected behavior
 
-Tell us what should happen
+<!-- What is the expected behavior? -->
 
 ### Actual behavior
 
-Tell us what happens instead
-
-### System configuration
-
-**Node version**:
-
-**npm version**:
+<!-- What is the actual behavior? -->
