@@ -1,111 +1,111 @@
 section.container#typography
-	if (!isHome)
-		include carbonads.pug
-	h3.title
-		| Typography
-	p.description
-		| CSS3 introduces a few new units, including the
-		= ' '
-		code rem
-		= ' '
-		| unit, which stands for
-		= ' '
-		em "root em"
-		| . The
-		= ' '
-		code rem
-		= ' '
-		| unit is relative to the font-size of the root element
-		= ' '
-		code html
-		= ' '
-		| . That means that we can define a single font size on the root element, and define all
-		= ' '
-		code rem
-		= ' '
-		| units to be a percentage of that. The typography has
-		= ' '
-		code font-size
-		= ' '
-		| defined in 1.6rem (16px) and
-		= ' '
-		code line-height
-		= ' '
-		| in 1.6 (24px).
-		= ' '
-		strong Milligram
-		= ' '
-		| uses the
-		= ' '
-		code font-family
-		a(href='https://www.google.com/fonts/specimen/Roboto' title='Roboto by Christian Robertson' target='_blank' rel='noopener')  Roboto
-		| , created by
-		= ' '
-		u Christian Robertson
-		| , and provided by Google.
-	div.example
-		div.row
-			div.column
-				h1 Heading
-					span.heading-font-size
-						= ' '
-						code h1
-						= ' '
-						| 4.6rem (46px)
-				h2 Heading
-					span.heading-font-size
-						= ' '
-						code h2
-						= ' '
-						| 3.6rem (36px)
-				h3 Heading
-					span.heading-font-size
-						= ' '
-						code h3
-						= ' '
-						| 2.8rem (28px)
-				h4 Heading
-					span.heading-font-size
-						= ' '
-						code h4
-						= ' '
-						| 2.2rem (22px)
-				h5 Heading
-					span.heading-font-size
-						= ' '
-						code h5
-						= ' '
-						| 1.8rem (18px)
-				h6 Heading
-					span.heading-font-size
-						= ' '
-						code h6
-						= ' '
-						| 1.6rem (16px)
-	pre.code.prettyprint
-		code.code-content
-			| <!-- Base font-size and line-height -->
-			| <p>The base type is 1.6rem (16px) over 1.6 line height (24px)</p>
-			= '\n\n'
-			| <!-- Other elements to text markup -->
-			| <a>Anchor</a>
-			| <em>Emphasis</em>
-			| <small>Small</small>
-			| <strong>Strong</strong>
-			| <u>Underline</u>
-			= '\n\n'
-			| <!-- Default Headings -->
-			| <h1>Heading</h1>
-			| <h2>Heading</h2>
-			| <h3>Heading</h3>
-			| <h4>Heading</h4>
-			| <h5>Heading</h5>
-			| <h6>Heading</h6>
-			= '\n\n'
-			| <!-- The base font-size is set at 62.5% for having the convenience of sizing rems in a way that is similar to using px. So basically 1.6rem = 16px. -->
-	if (isHome)
-		p
-			| See more examples of
-			= ' '
-			a(href='typography.html' title='Typography') typography
-			| .
+  if (!isHome)
+    include carbonads.pug
+  h3.title
+    | Typography
+  p.description
+    | CSS3 introduces a few new units, including the
+    = ' '
+    code rem
+    = ' '
+    | unit, which stands for
+    = ' '
+    em "root em"
+    | . The
+    = ' '
+    code rem
+    = ' '
+    | unit is relative to the font-size of the root element
+    = ' '
+    code html
+    = ' '
+    | . That means that we can define a single font size on the root element, and define all
+    = ' '
+    code rem
+    = ' '
+    | units to be a percentage of that. The typography has
+    = ' '
+    code font-size
+    = ' '
+    | defined in 1.6rem (16px) and
+    = ' '
+    code line-height
+    = ' '
+    | in 1.6 (24px).
+    = ' '
+    strong Milligram
+    = ' '
+    | uses the
+    = ' '
+    code font-family
+    a(href='https://www.google.com/fonts/specimen/Roboto' title='Roboto by Christian Robertson' target='_blank' rel='noopener')  Roboto
+    | , created by
+    = ' '
+    u Christian Robertson
+    | , and provided by Google.
+  div.example
+    div.row
+      div.column
+        h1 Heading
+          span.heading-font-size
+            = ' '
+            code h1
+            = ' '
+            | 4.6rem (46px)
+        h2 Heading
+          span.heading-font-size
+            = ' '
+            code h2
+            = ' '
+            | 3.6rem (36px)
+        h3 Heading
+          span.heading-font-size
+            = ' '
+            code h3
+            = ' '
+            | 2.8rem (28px)
+        h4 Heading
+          span.heading-font-size
+            = ' '
+            code h4
+            = ' '
+            | 2.2rem (22px)
+        h5 Heading
+          span.heading-font-size
+            = ' '
+            code h5
+            = ' '
+            | 1.8rem (18px)
+        h6 Heading
+          span.heading-font-size
+            = ' '
+            code h6
+            = ' '
+            | 1.6rem (16px)
+  pre.code.prettyprint
+    code.code-content
+      | <!-- Base font-size and line-height -->
+      | <p>The base type is 1.6rem (16px) over 1.6 line height (24px)</p>
+      = '\n\n'
+      | <!-- Other elements to text markup -->
+      | <a>Anchor</a>
+      | <em>Emphasis</em>
+      | <small>Small</small>
+      | <strong>Strong</strong>
+      | <u>Underline</u>
+      = '\n\n'
+      | <!-- Default Headings -->
+      | <h1>Heading</h1>
+      | <h2>Heading</h2>
+      | <h3>Heading</h3>
+      | <h4>Heading</h4>
+      | <h5>Heading</h5>
+      | <h6>Heading</h6>
+      = '\n\n'
+      | <!-- The base font-size is set at 62.5% for having the convenience of sizing rems in a way that is similar to using px. So basically 1.6rem = 16px. -->
+  if (isHome)
+    p
+      | See more examples of
+      = ' '
+      a(href='typography.html' title='Typography') typography
+      | .

@@ -1,37 +1,37 @@
 section.container#code
-	if (!isHome)
-		include carbonads.pug
-	h3.title
-		| Code
-	p.description
-		| The Code element represents a fragment of computer code. Just wrap anything in a
-		= ' '
-		code code
-		= ' '
-		| and it will appear like this. if you need a block, by default, enter the
-		= ' '
-		code code
-		= ' '
-		| within the
-		= ' '
-		code pre
-		| element.
-	div.example
-		pre
-			code
-				| .milligram {
-				|   color: #9b4dca;
-				| }
-	pre.code.prettyprint
-		code.code-content
-			| <pre><code>
-			| .milligram {
-			|   color: #9b4dca;
-			| }
-			| </code></pre>
-	if (isHome)
-		p
-			| See more examples of
-			= ' '
-			a(href='code.html' title='Code') code
-			| .
+  if (!isHome)
+    include carbonads.pug
+  h3.title
+    | Code
+  p.description
+    | The Code element represents a fragment of computer code. Just wrap anything in a
+    = ' '
+    code code
+    = ' '
+    | and it will appear like this. if you need a block, by default, enter the
+    = ' '
+    code code
+    = ' '
+    | within the
+    = ' '
+    code pre
+    | element.
+  div.example
+    pre
+      code
+        | .milligram {
+        |   color: #9b4dca;
+        | }
+  pre.code.prettyprint
+    code.code-content
+      | <pre><code>
+      | .milligram {
+      |   color: #9b4dca;
+      | }
+      | </code></pre>
+  if (isHome)
+    p
+      | See more examples of
+      = ' '
+      a(href='code.html' title='Code') code
+      | .
