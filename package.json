@@ -51,8 +51,8 @@
     "complexity": "run-p complexity:styles complexity:scripts",
     "complexity:styles": "opn http://www.cssstats.com/stats?url=http://localhost:3000",
     "complexity:scripts": "plato -r -d test/complexity -e .eslintrc -x .json src/**/*.js && opn test/complexity/index.html",
-    "compare": "backstop test --configPath=backstop.conf.js",
-    "reference": "backstop reference --configPath=backstop.conf.js",
+    "visual-regression": "backstop test --configPath=backstop.conf.js",
+    "visual-regression:reference": "backstop reference --configPath=backstop.conf.js",
     "clean:unnecessary": "rimraf dist/layout.html dist/fonts dist/templates",
     "deploy": "run-s build clean:unnecessary && cp -r src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master"
   },
