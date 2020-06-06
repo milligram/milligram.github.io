@@ -1,6 +1,6 @@
 {
   "name": "milligram.github.io",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Milligram website",
   "homepage": "https://milligram.io",
   "repository": "milligram/milligram.github.io",
@@ -47,7 +47,7 @@
     "watch:scripts": "onchange 'src/scripts' -- run-p build:scripts",
     "watch:images": "onchange 'src/images' -- run-p build:images",
     "lint": "prettier-standard --check && sass-lint -c .sasslintrc src/styles/*.sass --verbose --no-exit",
-    "test": "run run build",
+    "test": "npm run build",
     "complexity": "run-p complexity:styles complexity:scripts",
     "complexity:styles": "opn http://www.cssstats.com/stats?url=http://localhost:3000",
     "complexity:scripts": "plato -r -d test/complexity -e .eslintrc -x .json src/**/*.js && opn test/complexity/index.html",
