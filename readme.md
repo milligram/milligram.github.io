@@ -1,6 +1,6 @@
-<a align="center" href="https://milligram.io"><img width="100%" src="https://milligram.io/images/thumbnail.png" alt="Milligram - A minimalist CSS framework."></a>
+<a align="center" href="https://milligram.io"><img width="100%" src="https://milligram.io/images/thumbnail.png" alt="Milligram - A minimalist CSS framework"></a>
 
-> A minimalist CSS framework.
+> A minimalist CSS framework
 
 [![Travis Status](https://travis-ci.org/milligram/milligram.svg?branch=master)](https://travis-ci.org/milligram/milligram?branch=master)
 [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/xcm8meymwerq0r82?svg=true)](https://ci.appveyor.com/project/cjpatoilo/milligram)
