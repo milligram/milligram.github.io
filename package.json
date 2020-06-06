@@ -1,69 +1,78 @@
 {
-	"name": "milligram.github.io",
-	"version": "0.6.1",
-	"description": "Milligram website",
-	"homepage": "https://milligram.io",
-	"repository": "milligram/milligram.github.io",
-	"license": "MIT",
-	"author": "CJ Patoilo <cjpatoilo@gmail.com>",
-	"private": true,
-	"engines": {
-		"node": "^10.20.1",
-		"npm": "^6.14.4"
-	},
-	"dependencies": {
-		"milligram": "latest"
-	},
-	"devDependencies": {
-		"backstopjs": "^3.1.17",
-		"browser-sync": "^2.26.7",
-		"cname": "^0.0.2",
-		"copycopy": "0.0.2",
-		"csscompile": "^0.2.0",
-		"editorconfig-tools": "^0.1.1",
-		"eslint": "^6.0.1",
-		"eslint-config-styled": "0.0.2",
-		"gh-pages": "^2.0.1",
-		"htmlcompile": "^0.3.0",
-		"husky": "^3.0.0",
-		"imgcompile": "^0.0.0",
-		"jscompile": "^0.0.2",
-		"npm-run-all": "^4.1.5",
-		"onchange": "^6.0.0",
-		"opn-cli": "^5.0.0",
-		"plato": "^1.7.0",
-		"rimraf": "^2.6.3",
-		"sass-lint": "^1.13.1",
-		"sw-precache": "^5.2.1"
-	},
-	"scripts": {
-		"start": "run-s build watch",
-		"server": "browser-sync --no-notify start -s dist -f dist",
-		"build": "run-s clean && run-p build:misc build:fonts build:templates build:styles build:scripts build:images",
-		"build:misc": "cname dist",
-		"build:fonts": "copycopy src/fonts dist",
-		"build:templates": "htmlcompile src dist",
-		"build:styles": "csscompile src/styles dist/styles",
-		"build:scripts": "jscompile src/scripts dist/scripts",
-		"build:images": "imgcompile src/images dist/images",
-		"watch": "run-p watch:templates watch:styles watch:scripts watch:images server",
-		"watch:fonts": "onchange 'src/fonts' -- run-p build:fonts",
-		"watch:templates": "onchange 'src/**/*.{pug,jade,ejs,haml,hbs,hogan,html}' -- run-p build:templates",
-		"watch:styles": "onchange 'src/styles' -- run-p build:styles",
-		"watch:scripts": "onchange 'src/scripts' -- run-p build:scripts",
-		"watch:images": "onchange 'src/images' -- run-p build:images",
-		"lint": "run-p lint:scripts lint:styles lint:config",
-		"lint:styles": "sass-lint -c .sasslintrc src/styles/*.sass --verbose --no-exit",
-		"lint:scripts": "eslint . --ignore-path .gitignore",
-		"lint:config": "editorconfig-tools check .",
-		"test": "run-p build",
-		"complexity": "run-p complexity:styles complexity:scripts",
-		"complexity:styles": "opn http://www.cssstats.com/stats?url=http://localhost:3000",
-		"complexity:scripts": "plato -r -d test/complexity -e .eslintrc -x .json src/**/*.js && opn test/complexity/index.html",
-		"compare": "backstop test --configPath=backstop.conf.js",
-		"reference": "backstop reference --configPath=backstop.conf.js",
-		"clean": "rimraf dist",
-		"clean:unnecessary": "rimraf dist/layout.html dist/fonts dist/templates",
-		"deploy": "run-s build clean:unnecessary && copycopy src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master"
-	}
+  "name": "milligram.github.io",
+  "version": "0.6.1",
+  "description": "Milligram website",
+  "homepage": "https://milligram.io",
+  "repository": "milligram/milligram.github.io",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "milligram": "latest"
+  },
+  "devDependencies": {
+    "backstopjs": "^3.1.17",
+    "browser-sync": "^2.26.7",
+    "cname": "0.0.2",
+    "csscompile": "^0.2.0",
+    "gh-pages": "^3.0.0",
+    "htmlcompile": "^0.3.0",
+    "husky": "^4.2.5",
+    "imgcompile": "^0.0.0",
+    "jscompile": "^0.0.2",
+    "lint-staged": "^10.2.9",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.0.0",
+    "opn-cli": "^5.0.0",
+    "plato": "^1.7.0",
+    "prettier-standard": "^16.3.0",
+    "rimraf": "^3.0.2",
+    "sass-lint": "^1.13.1",
+    "sw-precache": "^5.2.1"
+  },
+  "scripts": {
+    "start": "run-s build watch",
+    "server": "browser-sync --no-notify start -s dist -f dist",
+    "build": "rimraf dist && run-p build:misc build:fonts build:templates build:styles build:scripts build:images",
+    "build:misc": "cname dist",
+    "build:fonts": "cp -r src/fonts dist",
+    "build:templates": "htmlcompile src dist",
+    "build:styles": "csscompile src/styles dist/styles",
+    "build:scripts": "jscompile src/scripts dist/scripts",
+    "build:images": "imgcompile src/images dist/images",
+    "watch": "run-p watch:templates watch:styles watch:scripts watch:images server",
+    "watch:fonts": "onchange 'src/fonts' -- run-p build:fonts",
+    "watch:templates": "onchange 'src/**/*.{pug,jade,ejs,haml,hbs,hogan,html}' -- run-p build:templates",
+    "watch:styles": "onchange 'src/styles' -- run-p build:styles",
+    "watch:scripts": "onchange 'src/scripts' -- run-p build:scripts",
+    "watch:images": "onchange 'src/images' -- run-p build:images",
+    "lint": "prettier-standard --check && sass-lint -c .sasslintrc src/styles/*.sass --verbose --no-exit",
+    "test": "run run build",
+    "complexity": "run-p complexity:styles complexity:scripts",
+    "complexity:styles": "opn http://www.cssstats.com/stats?url=http://localhost:3000",
+    "complexity:scripts": "plato -r -d test/complexity -e .eslintrc -x .json src/**/*.js && opn test/complexity/index.html",
+    "compare": "backstop test --configPath=backstop.conf.js",
+    "reference": "backstop reference --configPath=backstop.conf.js",
+    "clean:unnecessary": "rimraf dist/layout.html dist/fonts dist/templates",
+    "deploy": "run-s build clean:unnecessary && cp -r src/manifest.json dist && sw-precache --verbose --config sw-precache.config.js && gh-pages -d dist -b master"
+  },
+  "engines": {
+    "node": "^10.20.1",
+    "npm": "^6.14.5"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier-standard --format",
+      "git add"
+    ]
+  }
 }

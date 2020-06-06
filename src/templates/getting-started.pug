@@ -1,91 +1,91 @@
 section.container#getting-started
-	if (!isHome)
-		include carbonads.pug
-	h3.title
-		| Getting Started
-	p.description
-		| There are some ways to get started. First, see all download options available below, then choose the most suitable option for your need. Now you should add the main file of the Milligram and the CSS Reset in the header of your project. Just that!
-	p
-		a.button.download(href='https://github.com/milligram/milligram/archive/master.zip' title='Download Milligram') Download Milligram
-	div.example
-		p
-			strong Install with Bower
-		p
-			| Milligram is available to install using Bower.
-	pre.code.prettyprint
-		code.code-content
-			| $ bower install milligram
-	p
-		strong Install with npm
-	p
-		| Milligram is also available to install using npm.
-	pre.code.prettyprint
-		code.code-content
-			| $ npm install milligram
-	p
-		strong Install with Yarn
-	p
-		| Milligram is also available to install using Yarn.
-	pre.code.prettyprint
-		code.code-content
-			| $ yarn add milligram
-	p
-		strong What's included
-	p
-		| Once downloaded, extract the compressed folder to see the main file in the uncompressed and minified version.
-	pre.code.prettyprint.lang-md
-		code.code-content
-			| milligram/
-			| ├── examples/
-			| │   └── index.html
-			| ├── dist/
-			| │   ├── milligram.css
-			| │   └── milligram.min.css
-			| ├── license
-			| └── readme.md
-	p
-		strong Usage
-	p
-		| First, use any method mentioned above to download Milligram. Then, just add these tags in the head. Milligram is also available via
-		a(href='https://cdnjs.com/libraries/milligram' title='Milligram is also available via CDN' target='_blank' rel='noopener')  CDN
-		| .
-	pre.code.prettyprint
-		code.code-content
-			| <!-- Google Fonts -->
-			| <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-			= '\n\n'
-			| <!-- CSS Reset -->
-			| <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-			= '\n\n'
-			| <!-- Milligram CSS -->
-			| <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
-			= '\n\n'
-			| <!-- You should properly set the path from the main file. -->
-	p
-		strong CLI
-	p
-		| A CLI for getting started with Milligram. It offers a super simple boilerplate project with Milligram.
-	pre.code.prettyprint
-		code.code-content
-			| $ npm install -g milligram-cli
-	p
-		| Create a new app using the command
-		= ' '
-		code
-			| milligram init
-		|, then install dependencies and run with
-		= ' '
-		code
-			| npm start
-		| .
-	pre.code.prettyprint
-		code.code-content
-			| $ milligram init new_app
-			| $ cd new_app
-			| $ npm start
-	if (isHome)
-		p
-			| See more examples of
-			= ' '
-			a(href='getting-started.html' title='Getting Started') getting started
-			| .
+  if (!isHome)
+    include carbonads.pug
+  h3.title
+    | Getting Started
+  p.description
+    | There are some ways to get started. First, see all download options available below, then choose the most suitable option for your need. Now you should add the main file of the Milligram and the CSS Reset in the header of your project. Just that!
+  p
+    a.button.download(href='https://github.com/milligram/milligram/archive/master.zip' title='Download Milligram') Download Milligram
+  div.example
+    p
+      strong Install with Bower
+    p
+      | Milligram is available to install using Bower.
+  pre.code.prettyprint
+    code.code-content
+      | $ bower install milligram
+  p
+    strong Install with npm
+  p
+    | Milligram is also available to install using npm.
+  pre.code.prettyprint
+    code.code-content
+      | $ npm install milligram
+  p
+    strong Install with Yarn
+  p
+    | Milligram is also available to install using Yarn.
+  pre.code.prettyprint
+    code.code-content
+      | $ yarn add milligram
+  p
+    strong What's included
+  p
+    | Once downloaded, extract the compressed folder to see the main file in the uncompressed and minified version.
+  pre.code.prettyprint.lang-md
+    code.code-content
+      | milligram/
+      | ├── examples/
+      | │   └── index.html
+      | ├── dist/
+      | │   ├── milligram.css
+      | │   └── milligram.min.css
+      | ├── license
+      | └── readme.md
+  p
+    strong Usage
+  p
+    | First, use any method mentioned above to download Milligram. Then, just add these tags in the head. Milligram is also available via
+    a(href='https://cdnjs.com/libraries/milligram' title='Milligram is also available via CDN' target='_blank' rel='noopener')  CDN
+    | .
+  pre.code.prettyprint
+    code.code-content
+      | <!-- Google Fonts -->
+      | <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+      = '\n\n'
+      | <!-- CSS Reset -->
+      | <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+      = '\n\n'
+      | <!-- Milligram CSS -->
+      | <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+      = '\n\n'
+      | <!-- You should properly set the path from the main file. -->
+  p
+    strong CLI
+  p
+    | A CLI for getting started with Milligram. It offers a super simple boilerplate project with Milligram.
+  pre.code.prettyprint
+    code.code-content
+      | $ npm install -g milligram-cli
+  p
+    | Create a new app using the command
+    = ' '
+    code
+      | milligram init
+    |, then install dependencies and run with
+    = ' '
+    code
+      | npm start
+    | .
+  pre.code.prettyprint
+    code.code-content
+      | $ milligram init new_app
+      | $ cd new_app
+      | $ npm start
+  if (isHome)
+    p
+      | See more examples of
+      = ' '
+      a(href='getting-started.html' title='Getting Started') getting started
+      | .

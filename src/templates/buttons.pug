@@ -1,43 +1,43 @@
 section.container#buttons
-	if (!isHome)
-		include carbonads.pug
-	h3.title
-		| Buttons
-	p.description
-		| The Button, an essential part of any user experience. Buttons come in three basic styles in Milligram: The
-		= ' '
-		code button
-		= ' '
-		| element has flat color by default, whereas
-		= ' '
-		code .button-outline
-		= ' '
-		| has a simple outline around, and
-		= ' '
-		code .button-clear
-		= ' '
-		| is entirely clear.
-	div.example
-		a.button(href='javascript: void(0)') Default Button
-		= ' '
-		button.button.button-outline Outlined Button
-		= ' '
-		input.button.button-clear(type='submit' value='Clear Button')
-	pre.code.prettyprint
-		code.code-content
-			| <!-- Default Button -->
-			| <a class="button" href="#">Default Button</a>
-			= '\n\n'
-			| <!-- Outlined Button -->
-			| <button class="button button-outline">Outlined Button</button>
-			= '\n\n'
-			| <!-- Clear Button -->
-			| <input class="button button-clear" type="submit" value="Clear Button">
-			= '\n\n'
-			| <!-- Easily apply the .button class for button style in the anchor element. -->
-	if (isHome)
-		p
-			| See more examples of
-			= ' '
-			a(href='buttons.html' title='Buttons') buttons
-			| .
+  if (!isHome)
+    include carbonads.pug
+  h3.title
+    | Buttons
+  p.description
+    | The Button, an essential part of any user experience. Buttons come in three basic styles in Milligram: The
+    = ' '
+    code button
+    = ' '
+    | element has flat color by default, whereas
+    = ' '
+    code .button-outline
+    = ' '
+    | has a simple outline around, and
+    = ' '
+    code .button-clear
+    = ' '
+    | is entirely clear.
+  div.example
+    a.button(href='javascript: void(0)') Default Button
+    = ' '
+    button.button.button-outline Outlined Button
+    = ' '
+    input.button.button-clear(type='submit' value='Clear Button')
+  pre.code.prettyprint
+    code.code-content
+      | <!-- Default Button -->
+      | <a class="button" href="#">Default Button</a>
+      = '\n\n'
+      | <!-- Outlined Button -->
+      | <button class="button button-outline">Outlined Button</button>
+      = '\n\n'
+      | <!-- Clear Button -->
+      | <input class="button button-clear" type="submit" value="Clear Button">
+      = '\n\n'
+      | <!-- Easily apply the .button class for button style in the anchor element. -->
+  if (isHome)
+    p
+      | See more examples of
+      = ' '
+      a(href='buttons.html' title='Buttons') buttons
+      | .
