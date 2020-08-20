@@ -11,18 +11,17 @@
     "milligram": "latest"
   },
   "devDependencies": {
-    "backstopjs": "^3.1.17",
-    "browser-sync": "^2.26.10",
-    "cname": "0.0.2",
-    "csscompile": "^0.2.0",
+    "browser-sync": "^2.26.12",
+    "cname": "^0.1.1",
+    "csscompile": "^0.3.0",
     "gh-pages": "^3.0.0",
-    "htmlcompile": "^0.3.0",
+    "htmlcompile": "^0.4.1",
     "husky": "^4.2.5",
-    "imgcompile": "^0.0.0",
-    "jscompile": "^0.0.2",
+    "imgcompile": "^0.1.0",
+    "jscompile": "^0.2.1",
     "lint-staged": "^10.2.11",
     "npm-run-all": "^4.1.5",
-    "onchange": "^6.0.0",
+    "onchange": "^7.0.2",
     "opn-cli": "^5.0.0",
     "plato": "^1.7.0",
     "prettier-standard": "^16.3.0",
@@ -45,8 +44,6 @@
     "server": "browser-sync --no-notify start -s dist -f dist",
     "start": "run-s build watch",
     "test": "npm run build",
-    "visual-regression": "backstop test --configPath=backstop.conf.js",
-    "visual-regression:reference": "backstop reference --configPath=backstop.conf.js",
     "watch": "run-p watch:templates watch:styles watch:scripts watch:images server",
     "watch:fonts": "onchange 'src/fonts' -- run-p build:fonts",
     "watch:templates": "onchange 'src/**/*.{pug,jade,ejs,haml,hbs,hogan,html}' -- run-p build:templates",
@@ -55,7 +52,7 @@
     "watch:images": "onchange 'src/images' -- run-p build:images"
   },
   "engines": {
-    "node": "^10.20.1",
+    "node": "^12.18.0",
     "npm": "^6.14.5"
   },
   "prettier": {
