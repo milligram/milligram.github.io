@@ -23,7 +23,7 @@ section.container#forms
           = ' '
           label.label-inline(for='confirmField') Send a copy to yourself
         input.button-primary(type='submit' value='Send')
-  pre.code.prettyprint
+  pre.code.prettyprint.lang-html
     code.code-content
       | <form>
       |   <fieldset>
@@ -46,7 +46,7 @@ section.container#forms
       |   </fieldset>
       | </form>
       = '\n\n'
-      | <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it -->
+      | /* Always wrap checkbox and radio inputs in a label and use a `.label-inline` inside of it */
   if (isHome)
     p
       | See more examples of

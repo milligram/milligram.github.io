@@ -17,40 +17,41 @@ section.container#lists
     code dl
     = ' '
     | element and your items will not be marking, only spacings.
-  div.row.example
-    div.column
-      ul
-        li Unordered list item 1
-        li Unordered list item 2
-    div.column
-      ol
-        li Ordered list item 1
-        li Ordered list item 2
-    div.column
-      dl
-        dt Description list item 1
-        dd Description list item 1.1
-  pre.code.prettyprint
+  div.example
+    div.row
+      div.column
+        ul
+          li Unordered list item 1
+          li Unordered list item 2
+      div.column
+        ol
+          li Ordered list item 1
+          li Ordered list item 2
+      div.column
+        dl
+          dt Description list item 1
+          dd Description list item 1.1
+  pre.code.prettyprint.lang-html
     code.code-content
-      | <!-- Unordered list -->
+      | /* Unordered list */
       | <ul>
       |   <li>Unordered list item 1</li>
       |   <li>Unordered list item 2</li>
       | </ul>
       = '\n\n'
-      | <!-- Ordered list -->
+      | /* Ordered list */
       | <ol>
       |   <li>Ordered list item 1</li>
       |   <li>Ordered list item 2</li>
       | </ol>
       = '\n\n'
-      | <!-- Description list -->
+      | /* Description list */
       | <dl>
       |   <dt>Description list item 1</dt>
       |   <dd>Description list item 1.1</dd>
       | </dl>
       = '\n\n'
-      | <!-- Easily change any <dl>, <ul> or an <ol> to get clear lists, number lists or outline circles. -->
+      | /* Easily change any `dl`, `ul` or an `ol` to get clear lists, number lists or outline circles. */
   if (isHome)
     p
       | See more examples of
