@@ -1,7 +1,6 @@
 ;(() => {
   'use strict'
 
-  const $codeSnippets = document.querySelectorAll('.code-content')
   const entityMapObject = {
     '&': '&amp;',
     '<': '&lt;',
@@ -11,13 +10,22 @@
     '/': '&#x2F;',
   }
 
+  const $codeSnippets = document.querySelectorAll('.code-content')
+
   for (let index = 0; index < $codeSnippets.length; index++) {
-    $codeSnippets[index].innerHTML = escapeHtml($codeSnippets[index].innerHTML)
+    console.log($codeSnippets[index].parentNode.classList.contains('lang-html'), $codeSnippets[index].parentNode)
+    if ($codeSnippets[index].parentNode.classList.contains('lang-html')) $codeSnippets[index].innerHTML = changeCommet($codeSnippets[index].innerHTML)
+    $codeSnippets[index].innerHTML = escapeHTML($codeSnippets[index].innerHTML)
   }
 
-  function escapeHtml (string) {
-    return String(string).replace(/[&<>"']/g, index => {
-      return entityMapObject[index]
-    })
+  function escapeHTML (string) {
+    return String(string)
+      .replace(/[&<>"']/g, caracter => entityMapObject[caracter])
+  }
+
+  function changeCommet (string) {
+    return String(string)
+      .replace(/\/\*/g, '<!--')
+      .replace(/\*\//g, '-->')
   }
 })()

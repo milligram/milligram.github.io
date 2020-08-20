@@ -8,9 +8,9 @@
   )
 
   for (let index = 0; index < $snippets.length; index++) {
-    $snippets[index].insertAdjacentHTML(
+    $snippets[index].insertAdjacentElement(
       'beforebegin',
-      `<button class="button--clipboard" data-clipboard-action="copy" title="Copy"><img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy"></button>`,
+      createElementFromString('<button class="button--clipboard" data-clipboard-action="copy" title="Copy"><img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy"></button>'),
     )
     $snippets[index].previousElementSibling.setAttribute(
       'data-clipboard-text',
@@ -37,5 +37,11 @@
       .replace(/\/\* (.*?)\/\ */g, '')
       .replace(/\n\s*\n/g, '\n')
       .trim()
+  }
+
+  function createElementFromString(htmlString) {
+    var div = document.createElement('div')
+    div.innerHTML = htmlString.trim()
+    return div.firstChild
   }
 })()
