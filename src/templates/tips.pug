@@ -33,7 +33,7 @@ section.container#tips
           | screen: 120.0rem
           = ' '
           span.heading-font-size (1920px)
-  pre.code.prettyprint
+  pre.code.prettyprint.lang-css
     code.code-content
       | /* Mobile First Media Queries */
       = '\n\n'
@@ -65,15 +65,17 @@ section.container#tips
     = ' '
     a(href='https://fonts.google.com') Google Fonts
     |. To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document.
-  pre.code.prettyprint
+  pre.code.prettyprint.lang-html
     code.code-content
       | /* Embed Font */
       | <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab">
       = '\n\n'
       | /* Use the following CSS rules to specify these families */
+      | <style>
       | body {
       |   font-family: 'Roboto Slab', serif;
       | }
+      | </style>
   p
     strong Extending The Inheritances
   p
@@ -96,7 +98,7 @@ section.container#tips
         a.button.button-large(href='javascript: void(0)') .button-large
         a.button.button-large.button-outline(href='javascript: void(0)') .button-large
         a.button.button-large.button-clear(href='javascript: void(0)') .button-large
-  pre.code.prettyprint
+  pre.code.prettyprint.lang-css
     code.code-content
       | /* Extending The Inheritances */
       = '\n\n'

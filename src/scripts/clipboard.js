@@ -3,18 +3,18 @@
 
   if (!window.ClipboardJS) return
 
-  const $snippets = document.querySelectorAll(
-    '.code:not(.lang-md) .code-content',
-  )
+  const $snippets = document.querySelectorAll('.code:not(.lang-md)')
 
   for (let index = 0; index < $snippets.length; index++) {
-    $snippets[index].insertAdjacentHTML(
-      'afterend',
-      `<button class="button--clipboard" data-clipboard-action="copy" title="Copy"><img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy"></button>`,
+    $snippets[index].insertAdjacentElement(
+      'beforebegin',
+      createElementFromString(
+        '<button class="button--clipboard" data-clipboard-action="copy" title="Copy"><img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy"></button>',
+      ),
     )
-    $snippets[index].nextElementSibling.setAttribute(
+    $snippets[index].previousElementSibling.setAttribute(
       'data-clipboard-text',
-      parserContent($snippets[index].innerHTML),
+      parserContent($snippets[index].firstChild.innerHTML),
     )
   }
 
@@ -37,5 +37,11 @@
       .replace(/\/\* (.*?)\/\ */g, '')
       .replace(/\n\s*\n/g, '\n')
       .trim()
+  }
+
+  function createElementFromString (htmlString) {
+    var div = document.createElement('div')
+    div.innerHTML = htmlString.trim()
+    return div.firstChild
   }
 })()
