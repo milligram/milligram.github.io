@@ -3,14 +3,14 @@
 
   if (!window.ClipboardJS) return
 
-  const $snippets = document.querySelectorAll(
-    '.code:not(.lang-md)',
-  )
+  const $snippets = document.querySelectorAll('.code:not(.lang-md)')
 
   for (let index = 0; index < $snippets.length; index++) {
     $snippets[index].insertAdjacentElement(
       'beforebegin',
-      createElementFromString('<button class="button--clipboard" data-clipboard-action="copy" title="Copy"><img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy"></button>'),
+      createElementFromString(
+        '<button class="button--clipboard" data-clipboard-action="copy" title="Copy"><img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy"></button>',
+      ),
     )
     $snippets[index].previousElementSibling.setAttribute(
       'data-clipboard-text',
@@ -39,7 +39,7 @@
       .trim()
   }
 
-  function createElementFromString(htmlString) {
+  function createElementFromString (htmlString) {
     var div = document.createElement('div')
     div.innerHTML = htmlString.trim()
     return div.firstChild
