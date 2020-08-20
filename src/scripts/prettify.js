@@ -13,7 +13,6 @@
   const $codeSnippets = document.querySelectorAll('.code-content')
 
   for (let index = 0; index < $codeSnippets.length; index++) {
-    console.log($codeSnippets[index].parentNode.classList.contains('lang-html'), $codeSnippets[index].parentNode)
     if ($codeSnippets[index].parentNode.classList.contains('lang-html')) $codeSnippets[index].innerHTML = changeCommet($codeSnippets[index].innerHTML)
     $codeSnippets[index].innerHTML = escapeHTML($codeSnippets[index].innerHTML)
   }
