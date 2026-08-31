@@ -6,7 +6,16 @@
 
   if (!window.Sentry) return
 
-  window.Sentry.init({ dsn, environment })
+  window.Sentry.init({
+    dsn,
+    environment,
+    ignoreErrors: [
+      // Raised by third-party browser extensions calling their own
+      // runtime.sendMessage() after the tab closed; not triggered by
+      // any code on this site.
+      'Invalid call to runtime.sendMessage(). Tab not found.',
+    ],
+  })
 
   function getEnvironment (hostname) {
     window.environment =
